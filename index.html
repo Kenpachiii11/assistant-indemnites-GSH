@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistant Indemnités Algériennes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="./assets/gsh-logo.webp" alt="GSH Logo" class="logo" 
+           onerror="this.onerror=null; this.src='./assets/gsh-logo.png'">
+      <div class="header-text">
+        <h1>🇩🇿 Assistant des Indemnités</h1>
+        <p class="subtitle">Référence: Code du Travail Algérien</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <div class="search-container">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Rechercher une indemnité...">
+        <button id="searchBtn">Rechercher</button>
+      </div>
+      
+      <div id="result" class="results-container"></div>
+    </div>
+
+    <div class="pdf-container">
+      <div class="pdf-controls">
+        <button id="togglePdfBtn">Afficher/Masquer PDF</button>
+      </div>
+      <embed id="pdfViewer" src="./assets/code-travail.pdf#page=1" type="application/pdf">
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
