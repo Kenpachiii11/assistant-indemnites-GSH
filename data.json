@@ -111,8 +111,8 @@
     "name": "Indemnité de zone géographique / de conditions de vie (IZCV)",
     "abbreviations": ["IZCV", "zone sud"],
     "definition": "Indemnité versée aux travailleurs affectés dans certaines régions géographiques spécifiques (Sud, Hauts Plateaux) pour compenser les conditions de vie difficiles.",
-    "cotisable": "Généralement Oui",
-    "imposable": "Souvent Exonérée",
+    "cotisable": "Oui",
+    "imposable": "Exonérée",
     "reason": "Décrets exécutifs spécifiques (ex: Décret 82-184, Décret 95-39)",
     "keywords": ["régional", "déplacement", "compensation"]
   },
@@ -147,7 +147,7 @@
     "name": "Indemnité de transport",
     "abbreviations": ["IT", "transp"],
     "definition": "Participation de l'employeur aux frais de déplacement du salarié entre son domicile et son lieu de travail.",
-    "cotisable": "Généralement Oui",
+    "cotisable": "Oui",
     "imposable": "Exonérée jusqu'à plafond",
     "reason": "CIDTA Art. 68 (pour l'exonération fiscale partielle), Loi 83-14 (pour la cotisabilité)",
     "keywords": ["trajet", "bus", "métro"]
@@ -156,7 +156,7 @@
     "name": "Indemnité de panier / de repas",
     "abbreviations": ["IPR", "repas"],
     "definition": "Compensation pour les frais de repas lorsque le salarié ne peut prendre son repas chez lui ou à la cantine.",
-    "cotisable": "Généralement Oui",
+    "cotisable": "Oui",
     "imposable": "Exonérée jusqu'à plafond",
     "reason": "CIDTA Art. 68 (pour l'exonération fiscale partielle), Loi 83-14 (pour la cotisabilité)",
     "keywords": ["nourriture", "restaurant", "cantine"]
@@ -165,8 +165,8 @@
     "name": "Indemnité de véhicule / kilométrique",
     "abbreviations": ["IVK", "km"],
     "definition": "Indemnité versée au salarié utilisant son véhicule personnel pour des déplacements professionnels.",
-    "cotisable": "Conditionnel",
-    "imposable": "Conditionnel",
+    "cotisable": "Oui",
+    "imposable": "Exonérée jusqu'à plafond",
     "reason": "Principe du remboursement de frais professionnels (CIDTA Art. 68, Loi 83-14)",
     "keywords": ["voiture", "déplacement", "mission"]
   },
@@ -177,7 +177,8 @@
     "cotisable": "Non",
     "imposable": "Non",
     "reason": "Principe général d'exclusion des remboursements de frais (CIDTA Art. 68, Loi 83-14)",
-    "keywords": ["mission", "déplacement", "justificatif"]
+    "keywords": ["mission", "déplacement", "justificatif"],
+    "exoneration_reason": "Raison : Indemnités représentatives de frais (Art. 2-b du Décret 96-208) - Exclues car couvrent des dépenses justifiées, non un revenu."
   },
   {
     "name": "Indemnité compensatrice de congés payés",
@@ -204,16 +205,18 @@
     "cotisable": "Non",
     "imposable": "Exonérée",
     "reason": "Article 73-3 du Code du Travail (Loi 90-11) ; CIDTA Art. 68 ; Loi 83-14",
-    "keywords": ["rupture", "compensation", "calcul"]
+    "keywords": ["rupture", "compensation", "calcul"],
+    "exoneration_reason": "Raison : Primes/indemnités à caractère exceptionnel (Art. 2-c du Décret 96-208) - Compense un préjudice (rupture du contrat)."
   },
   {
     "name": "Indemnité de départ à la retraite",
     "abbreviations": ["IDR", "retraite"],
     "definition": "Prime versée au salarié au moment de son départ à la retraite.",
-    "cotisable": "Généralement Non",
-    "imposable": "Généralement Exonérée",
+    "cotisable": "Non",
+    "imposable": "Exonérée",
     "reason": "Loi sur la retraite (Loi 83-12 et textes subséquents), conventions collectives, Loi de Finances",
-    "keywords": ["pension", "fin carrière", "senior"]
+    "keywords": ["pension", "fin carrière", "senior"],
+    "exoneration_reason": "Raison : Primes/indemnités à caractère exceptionnel (Art. 2-c du Décret 96-208) - Prime ponctuelle liée à la fin de carrière."
   },
   {
     "name": "Avantages en Nature (Logement, Véhicule, Nourriture)",

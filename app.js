@@ -5,34 +5,34 @@ const resultDiv = document.getElementById('result');
 const pdfViewer = document.getElementById('pdfViewer');
 const togglePdfBtn = document.getElementById('togglePdfBtn');
 
-// Global variable for indemnities data
+// Global variable to store indemnities
 let indemnities = [];
 
-// Normalize text for searching (remove accents and make lowercase)
-function normalizeText(text) {
-  return text.toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
-}
-
-// Load data from JSON file
-async function loadIndemnitiesData() {
+// Fetch indemnities from the JSON file
+async function fetchIndemnities() {
   try {
-    const response = await fetch('./data.json');
+    const response = await fetch('data.json');
     if (!response.ok) {
-      throw new Error('Failed to load data');
+      throw new Error('Failed to load indemnities data');
     }
     indemnities = await response.json();
-    console.log('Data loaded successfully:', indemnities.length, 'items');
+    displayAllIndemnities();
   } catch (error) {
-    console.error('Error loading data:', error);
+    console.error(error);
     resultDiv.innerHTML = `
-      <div class="error">
-        <p>Erreur de chargement des données. Veuillez réessayer plus tard.</p>
-        <p>${error.message}</p>
+      <div class="no-results">
+        <p>Erreur lors du chargement des données des indemnités.</p>
       </div>
     `;
   }
+}
+
+// Normalize text for searching (remove accents and make lowercase)
+function normalizeText(text) {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
 }
 
 // Search function with improved matching
@@ -41,16 +41,14 @@ function searchIndemnity() {
   resultDiv.innerHTML = '';
 
   if (!query) {
-    resultDiv.innerHTML = '<p class="error">Veuillez entrer un terme de recherche</p>';
+    displayAllIndemnities();
     return;
   }
 
-  // Normalize the query
   const normalizedQuery = normalizeText(query);
   const queryWords = normalizedQuery.split(/\s+/).filter(word => word.length > 0);
 
   const results = indemnities.filter(item => {
-    // Combine all searchable text fields
     const searchText = normalizeText([
       item.name,
       ...(item.abbreviations || []),
@@ -59,45 +57,77 @@ function searchIndemnity() {
       item.reason
     ].join(' '));
 
-    // Check if all query words appear somewhere in the search text
     return queryWords.every(word => searchText.includes(word));
   });
 
   if (results.length > 0) {
     displayResults(results);
   } else {
+    showNoResults(query);
+  }
+}
+
+// Display all indemnities initially
+function displayAllIndemnities() {
+  if (indemnities && Array.isArray(indemnities)) {
+    displayResults(indemnities);
+  } else {
     resultDiv.innerHTML = `
       <div class="no-results">
-        <p>Aucun résultat trouvé pour "${query}"</p>
-        <p>Essayez avec un terme différent ou plus général.</p>
+        <p>Les données des indemnités ne sont pas disponibles.</p>
       </div>
     `;
   }
 }
 
-// Enhanced display results with PDF linking
+// Enhanced display results
 function displayResults(results) {
   resultDiv.innerHTML = results.map(item => `
     <div class="indemnity-card">
       <h3>${item.name} ${item.abbreviations ? `(${item.abbreviations.join(', ')})` : ''}</h3>
-      <p class="definition"><strong>Définition:</strong> ${item.definition}</p>
-      <span class="property-line"><strong>Cotisable:</strong> ${item.cotisable}</span>
-      <span class="property-line"><strong>Imposable:</strong> ${item.imposable}</span>
-      <p class="reference"><strong>Référence légale:</strong> ${item.reason}</p>
-      ${item.pdfPage ? `<button class="show-pdf-btn" data-page="${item.pdfPage}">Voir dans le Code du Travail</button>` : ''}
+      <p class="definition">${item.definition}</p>
+      
+      <div class="property-line">
+        <strong>Cotisable:</strong> 
+        <span class="cotisable-${item.cotisable.toLowerCase()}">${item.cotisable}</span>
+      </div>
+      
+      <div class="property-line">
+        <strong>Imposable:</strong> 
+        <span class="imposable-${item.imposable.toLowerCase()}">${item.imposable}</span>
+      </div>
+      
+      <div class="reference">${item.reason}</div>
+      
+      ${item.pdfPage ? `
+        <button class="show-pdf-btn" data-page="${item.pdfPage}">
+          Voir dans le Code du Travail
+        </button>` : ''
+      }
+      
+      <div class="keywords">
+        ${item.keywords.map(kw => `<span class="keyword-tag">${kw}</span>`).join('')}
+      </div>
     </div>
   `).join('');
 
-  // Add event listeners to PDF buttons if they exist
+  // Add event listeners to PDF buttons
   document.querySelectorAll('.show-pdf-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
-      const pageNum = e.target.getAttribute('data-page');
-      showPdfPage(pageNum);
+      showPdfPage(e.target.getAttribute('data-page'));
     });
   });
 }
 
-// Show specific page in PDF viewer
+function showNoResults(query) {
+  resultDiv.innerHTML = `
+    <div class="no-results">
+      <p>Aucun résultat trouvé pour "${query}"</p>
+      <p>Essayez avec un terme différent ou plus général.</p>
+    </div>
+  `;
+}
+
 function showPdfPage(pageNum) {
   pdfViewer.src = `./assets/code-travail.pdf#page=${pageNum}`;
   if (pdfViewer.style.display === 'none') {
@@ -105,9 +135,10 @@ function showPdfPage(pageNum) {
   }
 }
 
-// Toggle PDF viewer
 function togglePdfViewer() {
   pdfViewer.style.display = pdfViewer.style.display === 'none' ? 'block' : 'none';
+  togglePdfBtn.textContent = pdfViewer.style.display === 'none' ? 
+    'Afficher PDF' : 'Masquer PDF';
 }
 
 // Event listeners
@@ -118,11 +149,4 @@ searchInput.addEventListener('keypress', (e) => {
 togglePdfBtn.addEventListener('click', togglePdfViewer);
 
 // Initialize
-document.addEventListener('DOMContentLoaded', () => {
-  loadIndemnitiesData();
-  
-  // Set PDF viewer to be hidden by default on mobile
-  if (window.innerWidth <= 768) {
-    pdfViewer.style.display = 'none';
-  }
-});
+document.addEventListener('DOMContentLoaded', fetchIndemnities);

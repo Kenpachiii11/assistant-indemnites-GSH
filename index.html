@@ -13,7 +13,7 @@
            onerror="this.onerror=null; this.src='./assets/gsh-logo.png'">
       <div class="header-text">
         <h1>🇩🇿 Assistant des Indemnités</h1>
-        <p class="subtitle">Référence: Code du Travail Algérien</p>
+        <p class="subtitle">Référence: Code du Travail Algérien (Loi 90-11)</p>
       </div>
     </div>
   </header>
@@ -24,18 +24,19 @@
         <input type="text" id="searchInput" placeholder="Rechercher une indemnité...">
         <button id="searchBtn">Rechercher</button>
       </div>
-      
       <div id="result" class="results-container"></div>
     </div>
 
     <div class="pdf-container">
       <div class="pdf-controls">
         <button id="togglePdfBtn">Afficher/Masquer PDF</button>
+        <span class="pdf-reference">Décret 96-208 Art. 2</span>
       </div>
       <embed id="pdfViewer" src="./assets/code-travail.pdf#page=1" type="application/pdf">
     </div>
   </div>
 
+  <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
