@@ -27,222 +27,122 @@
     "keywords": ["performance", "bonus", "résultats"]
   },
   {
-    "name": "Prime d'objectif",
-    "abbreviations": ["PO", "prime obj"],
-    "definition": "Prime versée lors de l'atteinte d'objectifs prédéfinis.",
+    "name": "Indemnité différentielle sur le revenu",
+    "abbreviations": ["IDR", "Diff. Salaire"],
+    "definition": "Ajustement salarial pour compenser une baisse de revenu due à un reclassement ou changement de poste.",
     "cotisable": "Oui",
     "imposable": "Oui",
-    "reason": "Convention collective, accord d'entreprise, contrat de travail ; Principe général CIDTA Art. 66 / Loi 83-14",
-    "keywords": ["cible", "performance", "kpi"]
+    "reason": "Conventions collectives (principe de protection salariale inspiré de l'Art. 10 Code du Travail)",
+    "keywords": ["ajustement", "protection", "reclassement"]
   },
   {
-    "name": "Prime d'ancienneté",
-    "abbreviations": ["PA", "prime ancien"],
-    "definition": "Supplément de salaire calculé en fonction du nombre d'années de service du salarié dans l'entreprise.",
+    "name": "Indemnité de service permanent",
+    "abbreviations": ["ISP", "Perm."],
+    "definition": "Compensation pour disponibilité permanente hors horaires normaux (cadres dirigeants, responsables urgences).",
     "cotisable": "Oui",
     "imposable": "Oui",
-    "reason": "Convention collective, accord d'entreprise ; Principe général CIDTA Art. 66 / Loi 83-14",
-    "keywords": ["expérience", "seniorité", "années"]
+    "reason": "Convention collective (dérivée de l'Art. 30 Code du Travail)",
+    "keywords": ["permanence", "urgence", "cadre"]
   },
   {
-    "name": "Indemnité d'expérience professionnelle (IEP)",
-    "abbreviations": ["IEP", "exp pro"],
-    "definition": "Indemnité visant à valoriser l'expérience acquise par le salarié, souvent liée à l'ancienneté.",
+    "name": "Indemnité de technicité",
+    "abbreviations": ["ITEC", "Tech"],
+    "definition": "Prime pour compétences techniques rares ou expertise spécifique.",
     "cotisable": "Oui",
     "imposable": "Oui",
-    "reason": "Convention collective, accord d'entreprise ; Principe général CIDTA Art. 66 / Loi 83-14",
-    "keywords": ["expérience", "compétences", "valorisation"]
+    "reason": "Accord d'entreprise (CIDTA Art. 66)",
+    "keywords": ["expertise", "compétence", "spécialisation"]
   },
   {
-    "name": "Prime de fin d'année / 13ème mois",
-    "abbreviations": ["PFA", "13 mois"],
-    "definition": "Prime annuelle, souvent équivalente à un mois de salaire, versée généralement en fin d'année.",
+    "name": "Indemnité de sujétion",
+    "abbreviations": ["IS", "Sujét."],
+    "definition": "Compensation pour contraintes exceptionnelles non couvertes par les indemnités de pénibilité.",
     "cotisable": "Oui",
     "imposable": "Oui",
-    "reason": "Convention collective, accord d'entreprise, contrat de travail ou usage",
-    "keywords": ["annuel", "bonus", "décembre"]
+    "reason": "Convention collective (Art. 30 Code du Travail)",
+    "keywords": ["contrainte", "exceptionnel", "rigueur"]
   },
   {
-    "name": "Gratifications diverses",
-    "abbreviations": ["GD", "prime excep"],
-    "definition": "Primes exceptionnelles non récurrentes (ex: Aïd, naissance, mariage, résultats exceptionnels).",
+    "name": "Prime de bilan",
+    "abbreviations": ["PB", "Bilan"],
+    "definition": "Prime annuelle liée aux performances financières de l'entreprise.",
     "cotisable": "Oui",
     "imposable": "Oui",
-    "reason": "Politique de l'entreprise, usage ; Principe général CIDTA Art. 66 / Loi 83-14",
-    "keywords": ["cadeau", "fête", "exceptionnel"]
+    "reason": "Accord d'entreprise (CIDTA Art. 66)",
+    "keywords": ["performance", "résultats", "annuel"]
   },
   {
-    "name": "Prime de vacances",
-    "abbreviations": ["PV", "prime vac"],
-    "definition": "Somme additionnelle (distincte de l'indemnité de congés payés) versée au moment du départ en congé annuel.",
+    "name": "Prime d'inventaire",
+    "abbreviations": ["PINV", "Invent."],
+    "definition": "Rémunération pour participation aux inventaires physiques.",
     "cotisable": "Oui",
     "imposable": "Oui",
-    "reason": "Convention collective, accord d'entreprise",
-    "keywords": ["été", "repos", "congé"]
+    "reason": "Usage ou convention collective",
+    "keywords": ["stock", "comptage", "exceptionnel"]
   },
   {
-    "name": "Indemnité de travail posté / par équipe",
-    "abbreviations": ["ITP", "shift"],
-    "definition": "Compensation pour les contraintes liées au travail organisé par équipes successives (shifts).",
-    "cotisable": "Oui",
-    "imposable": "Oui",
-    "reason": "Article 30 du Code du Travail (Loi 90-11), convention collective",
-    "keywords": ["équipe", "rotation", "horaires"]
-  },
-  {
-    "name": "Indemnité de travail de nuit",
-    "abbreviations": ["ITN", "nuit"],
-    "definition": "Majoration de salaire pour les heures travaillées durant la plage horaire définie comme 'nuit'.",
-    "cotisable": "Oui",
-    "imposable": "Oui",
-    "reason": "Article 30 du Code du Travail (Loi 90-11), convention collective",
-    "keywords": ["nocturne", "horaires", "majoration"]
-  },
-  {
-    "name": "Prime de nuisance / de risque / de danger",
-    "abbreviations": ["PND", "danger"],
-    "definition": "Compensation pour des conditions de travail particulièrement pénibles, insalubres ou dangereuses inhérentes au poste.",
-    "cotisable": "Oui",
-    "imposable": "Oui",
-    "reason": "Convention collective, accord d'entreprise ; Principe général CIDTA Art. 66 / Loi 83-14",
-    "keywords": ["risque", "pénibilité", "sécurité"]
-  },
-  {
-    "name": "Indemnité de zone géographique / de conditions de vie (IZCV)",
-    "abbreviations": ["IZCV", "zone sud"],
-    "definition": "Indemnité versée aux travailleurs affectés dans certaines régions géographiques spécifiques (Sud, Hauts Plateaux) pour compenser les conditions de vie difficiles.",
-    "cotisable": "Oui",
-    "imposable": "Exonérée",
-    "reason": "Décrets exécutifs spécifiques (ex: Décret 82-184, Décret 95-39)",
-    "keywords": ["régional", "déplacement", "compensation"]
-  },
-  {
-    "name": "Indemnité d'astreinte",
-    "abbreviations": ["IA", "dispo"],
-    "definition": "Compensation pour la période pendant laquelle le salarié doit rester disponible pour intervenir à la demande de l'employeur en dehors de ses heures normales.",
-    "cotisable": "Oui",
-    "imposable": "Oui",
-    "reason": "Convention collective, accord d'entreprise",
-    "keywords": ["disponibilité", "urgence", "on-call"]
-  },
-  {
-    "name": "Indemnité de responsabilité",
-    "abbreviations": ["IR", "resp"],
-    "definition": "Prime versée pour compenser les responsabilités particulières liées à un poste (encadrement, gestion).",
-    "cotisable": "Oui",
-    "imposable": "Oui",
-    "reason": "Convention collective, accord d'entreprise",
-    "keywords": ["manager", "gestion", "encadrement"]
-  },
-  {
-    "name": "Indemnité de caisse",
-    "abbreviations": ["IC", "caisse"],
-    "definition": "Prime allouée aux salariés manipulant des fonds pour couvrir les risques d'erreurs de caisse.",
-    "cotisable": "Oui",
-    "imposable": "Oui",
-    "reason": "Convention collective, accord d'entreprise",
-    "keywords": ["argent", "comptabilité", "risque"]
-  },
-  {
-    "name": "Indemnité de transport",
-    "abbreviations": ["IT", "transp"],
-    "definition": "Participation de l'employeur aux frais de déplacement du salarié entre son domicile et son lieu de travail.",
-    "cotisable": "Oui",
-    "imposable": "Exonérée jusqu'à plafond",
-    "reason": "CIDTA Art. 68 (pour l'exonération fiscale partielle), Loi 83-14 (pour la cotisabilité)",
-    "keywords": ["trajet", "bus", "métro"]
-  },
-  {
-    "name": "Indemnité de panier / de repas",
-    "abbreviations": ["IPR", "repas"],
-    "definition": "Compensation pour les frais de repas lorsque le salarié ne peut prendre son repas chez lui ou à la cantine.",
-    "cotisable": "Oui",
-    "imposable": "Exonérée jusqu'à plafond",
-    "reason": "CIDTA Art. 68 (pour l'exonération fiscale partielle), Loi 83-14 (pour la cotisabilité)",
-    "keywords": ["nourriture", "restaurant", "cantine"]
-  },
-  {
-    "name": "Indemnité de véhicule / kilométrique",
-    "abbreviations": ["IVK", "km"],
-    "definition": "Indemnité versée au salarié utilisant son véhicule personnel pour des déplacements professionnels.",
-    "cotisable": "Oui",
-    "imposable": "Exonérée jusqu'à plafond",
-    "reason": "Principe du remboursement de frais professionnels (CIDTA Art. 68, Loi 83-14)",
-    "keywords": ["voiture", "déplacement", "mission"]
-  },
-  {
-    "name": "Remboursements de frais professionnels",
-    "abbreviations": ["RFP", "frais"],
-    "definition": "Remboursement sur présentation de justificatifs des dépenses engagées pour les besoins professionnels.",
-    "cotisable": "Non",
-    "imposable": "Non",
-    "reason": "Principe général d'exclusion des remboursements de frais (CIDTA Art. 68, Loi 83-14)",
-    "keywords": ["mission", "déplacement", "justificatif"],
-    "exoneration_reason": "Raison : Indemnités représentatives de frais (Art. 2-b du Décret 96-208) - Exclues car couvrent des dépenses justifiées, non un revenu."
-  },
-  {
-    "name": "Indemnité compensatrice de congés payés",
-    "abbreviations": ["ICCP", "congés"],
-    "definition": "Paiement des jours de congés annuels acquis mais non pris au moment de la rupture du contrat.",
-    "cotisable": "Oui",
-    "imposable": "Oui",
-    "reason": "Article 52 du Code du Travail (Loi 90-11)",
-    "keywords": ["solde", "rupture", "acquis"]
-  },
-  {
-    "name": "Indemnité compensatrice de préavis",
-    "abbreviations": ["ICP", "préavis"],
-    "definition": "Somme versée lorsque l'employeur dispense le salarié d'effectuer sa période de préavis.",
-    "cotisable": "Oui",
-    "imposable": "Oui",
-    "reason": "Article 73-4 du Code du Travail (Loi 90-11)",
-    "keywords": ["rupture", "remplacement", "dispense"]
-  },
-  {
-    "name": "Indemnité de licenciement",
-    "abbreviations": ["IDL", "licenciement"],
-    "definition": "Compensation versée par l'employeur en cas de licenciement pour motif non disciplinaire.",
+    "name": "Prime de départ négocié",
+    "abbreviations": ["PDN", "Négoc."],
+    "definition": "Prime exceptionnelle versée lors d'un départ négocié.",
     "cotisable": "Non",
     "imposable": "Exonérée",
-    "reason": "Article 73-3 du Code du Travail (Loi 90-11) ; CIDTA Art. 68 ; Loi 83-14",
-    "keywords": ["rupture", "compensation", "calcul"],
-    "exoneration_reason": "Raison : Primes/indemnités à caractère exceptionnel (Art. 2-c du Décret 96-208) - Compense un préjudice (rupture du contrat)."
+    "reason": "Accord entre parties (Art. 73-3 Code du Travail)",
+    "keywords": ["rupture", "négociation", "exceptionnel"],
+    "exoneration_reason": "Raison : Indemnité de licenciement (Art. 73-3 Code du Travail)"
   },
   {
-    "name": "Indemnité de départ à la retraite",
-    "abbreviations": ["IDR", "retraite"],
-    "definition": "Prime versée au salarié au moment de son départ à la retraite.",
-    "cotisable": "Non",
+    "name": "Indemnité d'insalubrité et salissure",
+    "abbreviations": ["IIS", "Insal."],
+    "definition": "Compensation pour travaux exposant à des conditions insalubres.",
+    "cotisable": "Oui",
+    "imposable": "Oui",
+    "reason": "Convention collective (Art. 30 Code du Travail)",
+    "keywords": ["saleté", "risque", "hygiène"]
+  },
+  {
+    "name": "IFAAV (Indemnité forfaitaire pour avantage en véhicule)",
+    "abbreviations": ["IFAAV", "Véhic."],
+    "definition": "Forfait mensuel pour utilisation de véhicule personnel à des fins professionnelles.",
+    "cotisable": "Oui",
+    "imposable": "Oui",
+    "reason": "Accord d'entreprise (CIDTA Art. 67)",
+    "keywords": ["voiture", "mission", "forfait"]
+  },
+  {
+    "name": "Prime de fidélité",
+    "abbreviations": ["PF", "Fidél."],
+    "definition": "Prime encourageant la stabilité des employés après une durée déterminée.",
+    "cotisable": "Oui",
+    "imposable": "Oui",
+    "reason": "Convention collective ou politique interne",
+    "keywords": ["ancienneté", "loyauté", "retention"]
+  },
+  {
+    "name": "Indemnité de Zone A2/B2/C1",
+    "abbreviations": ["IZ-A2", "IZ-B2", "IZ-C1"],
+    "definition": "Variantes sectorielles de l'IZCV pour zones désertiques/extrêmes.",
+    "cotisable": "Oui",
     "imposable": "Exonérée",
-    "reason": "Loi sur la retraite (Loi 83-12 et textes subséquents), conventions collectives, Loi de Finances",
-    "keywords": ["pension", "fin carrière", "senior"],
-    "exoneration_reason": "Raison : Primes/indemnités à caractère exceptionnel (Art. 2-c du Décret 96-208) - Prime ponctuelle liée à la fin de carrière."
+    "reason": "Décrets sectoriels (ex: Décret 95-39 pour hydrocarbures)",
+    "keywords": ["région", "sud", "désert"],
+    "exoneration_reason": "Raison : Indemnité de zone géographique (Décret 82-184)"
   },
   {
-    "name": "Avantages en Nature (Logement, Véhicule, Nourriture)",
-    "abbreviations": ["AVN", "avantage"],
-    "definition": "Fourniture de biens ou services par l'employeur, évalués monétairement.",
-    "cotisable": "Oui",
-    "imposable": "Oui",
-    "reason": "CIDTA Art. 67, textes réglementaires sur l'évaluation des avantages en nature",
-    "keywords": ["logement", "voiture", "repas"]
+    "name": "Solde tout compte",
+    "abbreviations": ["STC", "Solde"],
+    "definition": "Document récapitulatif des sommes dues en fin de contrat.",
+    "cotisable": "Variable",
+    "imposable": "Variable",
+    "reason": "Article 73 Code du Travail",
+    "keywords": ["rupture", "liquidation", "final"]
   },
   {
-    "name": "Prime de présence / d'assiduité",
-    "abbreviations": ["PPA", "présence"],
-    "definition": "Prime visant à récompenser la présence régulière et l'absence de retards ou d'absences injustifiées.",
-    "cotisable": "Oui",
-    "imposable": "Oui",
-    "reason": "Convention collective, accord d'entreprise",
-    "keywords": ["ponctualité", "absentéisme", "régularité"]
-  },
-  {
-    "name": "Prime de représentation",
-    "abbreviations": ["PR", "représentation"],
-    "definition": "Allocation versée à certains cadres ou commerciaux pour couvrir des frais liés à la représentation de l'entreprise.",
-    "cotisable": "Oui",
-    "imposable": "Oui",
-    "reason": "Principe général CIDTA Art. 66 / Loi 83-14",
-    "keywords": ["client", "relation", "événement"]
+    "name": "PCS (Prévoyance sociale complémentaire)",
+    "abbreviations": ["PCS", "Prévoy."],
+    "definition": "Contribution facultative pour couverture sociale complémentaire.",
+    "cotisable": "Non",
+    "imposable": "Conditionnel",
+    "reason": "Accords d'entreprise",
+    "keywords": ["mutuelle", "retraite", "complémentaire"]
   }
 ]
