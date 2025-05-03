@@ -80,7 +80,7 @@ function displayAllIndemnities() {
   }
 }
 
-// Enhanced display results
+// Updated display results with exoneration reason display
 function displayResults(results) {
   resultDiv.innerHTML = results.map(item => `
     <div class="indemnity-card">
@@ -99,24 +99,15 @@ function displayResults(results) {
       
       <div class="reference">${item.reason}</div>
       
-      ${item.pdfPage ? `
-        <button class="show-pdf-btn" data-page="${item.pdfPage}">
-          Voir dans le Code du Travail
-        </button>` : ''
-      }
+      ${item.exoneration_reason ? `
+        <div class="exoneration-reason">${item.exoneration_reason}</div>
+      ` : ''}
       
       <div class="keywords">
         ${item.keywords.map(kw => `<span class="keyword-tag">${kw}</span>`).join('')}
       </div>
     </div>
   `).join('');
-
-  // Add event listeners to PDF buttons
-  document.querySelectorAll('.show-pdf-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      showPdfPage(e.target.getAttribute('data-page'));
-    });
-  });
 }
 
 function showNoResults(query) {
