@@ -132,6 +132,34 @@ function togglePdfViewer() {
     'Afficher PDF' : 'Masquer PDF';
 }
 
+// Quiz Modal functionality
+const quizBtn = document.createElement('button');
+quizBtn.className = 'quiz-btn';
+quizBtn.innerHTML = 'Quiz';
+quizBtn.title = 'Testez vos connaissances sur les indemnités';
+document.body.appendChild(quizBtn);
+
+const quizModal = document.getElementById('quizModal');
+const closeModal = document.querySelector('.close-modal');
+
+quizBtn.addEventListener('click', () => {
+  quizModal.classList.add('show');
+  document.body.style.overflow = 'hidden';
+});
+
+closeModal.addEventListener('click', () => {
+  quizModal.classList.remove('show');
+  document.body.style.overflow = '';
+});
+
+// Close modal when clicking outside
+quizModal.addEventListener('click', (e) => {
+  if (e.target === quizModal) {
+    quizModal.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+});
+
 // Event listeners
 searchBtn.addEventListener('click', searchIndemnity);
 searchInput.addEventListener('keypress', (e) => {

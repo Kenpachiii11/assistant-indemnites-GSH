@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz sur les Indemnités Algériennes</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Quiz specific styles that won't conflict with main styles */
+    .quiz-container {
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 20px !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      height: 100%;
+    }
+    
+    .question-container {
+      margin-bottom: 30px;
+      border-left: 4px solid #0056b3;
+      padding-left: 15px;
+    }
+    
+    .question {
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #333;
+    }
+    
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .option {
+      padding: 12px 15px;
+      background-color: #f0f7ff;
+      border: 1px solid #cce0ff;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .option:hover {
+      background-color: #e1eeff;
+      transform: translateX(5px);
+    }
+    
+    .option.selected {
+      background-color: #d4e6ff;
+      border-color: #0056b3;
+      font-weight: bold;
+    }
+    
+    .option.correct {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+    
+    .option.incorrect {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+    
+    .feedback {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 5px;
+      display: none;
+    }
+    
+    .feedback.correct {
+      background-color: #d4edda;
+      color: #155724;
+      display: block;
+    }
+    
+    .feedback.incorrect {
+      background-color: #f8d7da;
+      color: #721c24;
+      display: block;
+    }
+    
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+    
+    .score-container {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 18px;
+    }
+    
+    .progress-bar {
+      height: 10px;
+      background-color: #e9ecef;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    
+    .progress {
+      height: 100%;
+      background-color: #0056b3;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+    
+    @media screen and (max-width: 600px) {
+      .quiz-container {
+        padding: 10px !important;
+      }
+      
+      .question {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Quiz sur les Indemnités en Droit du Travail Algérien</h1>
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+    <div id="questionContainer" class="question-container">
+      <div id="question" class="question"></div>
+      <div id="options" class="options"></div>
+      <div id="feedback" class="feedback"></div>
+    </div>
+    <div class="controls">
+      <button id="prevBtn" disabled>Précédent</button>
+      <div class="score-container">
+        Question: <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
+      </div>
+      <button id="nextBtn" disabled>Suivant</button>
+    </div>
+    <div id="results" style="display: none;">
+      <h2>Résultats du Quiz</h2>
+      <p>Votre score: <span id="score">0</span>/<span id="totalScore">0</span></p>
+      <button id="restartBtn">Recommencer le Quiz</button>
+    </div>
+  </div>
+
+  <script>
+    const quizData = [
+      {
+        question: "Quelle est l'indemnité due à un travailleur en cas de déplacement temporaire?",
+        options: ["10% du salaire de base", "25% du salaire de base", "50% du salaire de base", "Aucune indemnité"],
+        correct: 1,
+        explanation: "Le Code du Travail prévoit 25% du salaire de base pour les déplacements temporaires."
+      },
+      {
+        question: "Pendant combien de temps est versée l'indemnité de zone ?",
+        options: ["3 mois", "6 mois", "Durée totale de l'affectation", "1 an"],
+        correct: 2,
+        explanation: "L'indemnité de zone est versée pendant toute la durée de l'affectation."
+      },
+      {
+        question: "Quelle indemnité compense les risques professionnels ?",
+        options: ["Indemnité de panier", "Indemnité de risque", "Prime de transport", "Prime d'ancienneté"],
+        correct: 1,
+        explanation: "L'indemnité de risque est prévue pour les travaux dangereux."
+      },
+      {
+        question: "Quel pourcentage pour les heures supplémentaires de nuit ?",
+        options: ["30%", "50%", "75%", "100%"],
+        correct: 3,
+        explanation: "Les heures de nuit donnent droit à une majoration de 100%."
+      },
+      {
+        question: "Quelle prime est liée à l'ancienneté ?",
+        options: ["Prime de rendement", "Prime de vacances", "Prime d'ancienneté", "Prime de bilan"],
+        correct: 2,
+        explanation: "La prime d'ancienneté récompense la fidélité dans l'entreprise."
+      },
+      {
+        question: "Quelle indemnité pour utilisation de véhicule personnel ?",
+        options: ["Indemnité kilométrique", "Prime de déplacement", "Indemnité carburant", "Prime véhicule"],
+        correct: 0,
+        explanation: "L'indemnité kilométrique couvre l'usage du véhicule personnel."
+      },
+      {
+        question: "Quelle est la durée maximale de la période d'essai en CDI ?",
+        options: ["3 mois", "6 mois", "12 mois", "18 mois"],
+        correct: 1,
+        explanation: "La période d'essai maximale pour un CDI est de 6 mois."
+      },
+      {
+        question: "Quel texte régit les conventions collectives ?",
+        options: ["Loi 90-11", "Loi 88-07", "Décret 95-39", "Ordonnance 75-31"],
+        correct: 0,
+        explanation: "La Loi 90-11 encadre les conventions collectives."
+      },
+      {
+        question: "Quelle indemnité en cas de licenciement abusif ?",
+        options: ["1 mois/salairé", "2 mois/salairé", "3 mois/salairé", "6 mois/salairé"],
+        correct: 2,
+        explanation: "Le Code du Travail prévoit minimum 3 mois de salaire."
+      },
+      {
+        question: "Quelle majoration pour travail le jour férié ?",
+        options: ["50%", "75%", "100%", "150%"],
+        correct: 2,
+        explanation: "Travail un jour férié donne droit à 100% de majoration."
+      }
+    ];
+
+    let currentQuizData = [];
+    let currentQuestion = 0;
+    let score = 0;
+    let questionAnswered = false;
+    let userAnswers = [];
+
+    // Éléments DOM
+    const questionEl = document.getElementById('question');
+    const optionsEl = document.getElementById('options');
+    const feedbackEl = document.getElementById('feedback');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const currentQuestionEl = document.getElementById('currentQuestion');
+    const totalQuestionsEl = document.getElementById('totalQuestions');
+    const progressEl = document.getElementById('progress');
+    const resultsEl = document.getElementById('results');
+    const scoreEl = document.getElementById('score');
+    const totalScoreEl = document.getElementById('totalScore');
+    const restartBtn = document.getElementById('restartBtn');
+    const questionContainerEl = document.getElementById('questionContainer');
+
+    // Mélange Fisher-Yates
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function initQuiz() {
+      currentQuizData = shuffleArray([...quizData]);
+      totalQuestionsEl.textContent = quizData.length;
+      totalScoreEl.textContent = quizData.length;
+      currentQuestion = 0;
+      score = 0;
+      userAnswers = new Array(currentQuizData.length).fill(-1);
+      showQuestion(currentQuestion);
+      updateControls();
+    }
+
+    function showQuestion(index) {
+      const question = currentQuizData[index];
+      questionEl.textContent = `${index + 1}. ${question.question}`;
+      optionsEl.innerHTML = '';
+      feedbackEl.innerHTML = '';
+      feedbackEl.className = 'feedback';
+      questionAnswered = userAnswers[index] !== -1;
+
+      question.options.forEach((option, i) => {
+        const optionElement = document.createElement('div');
+        optionElement.className = 'option';
+        if (userAnswers[index] === i) {
+          optionElement.className += ' selected';
+          if (i === question.correct) {
+            optionElement.className += ' correct';
+            showFeedback(true, question.explanation);
+          } else {
+            optionElement.className += ' incorrect';
+            showFeedback(false, question.explanation);
+            const correctOptionEl = document.createElement('div');
+            correctOptionEl.className = 'option correct';
+            correctOptionEl.textContent = question.options[question.correct];
+            optionsEl.appendChild(correctOptionEl);
+          }
+        }
+        optionElement.textContent = option;
+        if (userAnswers[index] === -1) {
+          optionElement.addEventListener('click', () => selectOption(i));
+        }
+        optionsEl.appendChild(optionElement);
+      });
+
+      currentQuestionEl.textContent = index + 1;
+      progressEl.style.width = `${((index + 1) / currentQuizData.length) * 100}%`;
+    }
+
+    function selectOption(optionIndex) {
+      if (questionAnswered) return;
+      const question = currentQuizData[currentQuestion];
+      userAnswers[currentQuestion] = optionIndex;
+      questionAnswered = true;
+      const isCorrect = optionIndex === question.correct;
+      if (isCorrect) score++;
+
+      const options = optionsEl.querySelectorAll('.option');
+      options.forEach((option, i) => {
+        if (i === optionIndex) option.className += isCorrect ? ' selected correct' : ' selected incorrect';
+        if (i === question.correct && !isCorrect) option.className += ' correct';
+      });
+
+      showFeedback(isCorrect, question.explanation);
+      nextBtn.disabled = false;
+    }
+
+    function showFeedback(isCorrect, explanation) {
+      feedbackEl.className = isCorrect ? 'feedback correct' : 'feedback incorrect';
+      feedbackEl.textContent = explanation;
+    }
+
+    function updateControls() {
+      prevBtn.disabled = currentQuestion === 0;
+      nextBtn.disabled = !questionAnswered && userAnswers[currentQuestion] === -1;
+      nextBtn.textContent = currentQuestion === currentQuizData.length - 1 && questionAnswered ? 'Voir Résultats' : 'Suivant';
+    }
+
+    function showResults() {
+      questionContainerEl.style.display = 'none';
+      document.querySelector('.controls').style.display = 'none';
+      resultsEl.style.display = 'block';
+      scoreEl.textContent = score;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        showQuestion(currentQuestion);
+        updateControls();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentQuestion < currentQuizData.length - 1) {
+        currentQuestion++;
+        showQuestion(currentQuestion);
+        questionAnswered = userAnswers[currentQuestion] !== -1;
+        updateControls();
+      } else showResults();
+    });
+
+    restartBtn.addEventListener('click', () => {
+      questionContainerEl.style.display = 'block';
+      document.querySelector('.controls').style.display = 'flex';
+      resultsEl.style.display = 'none';
+      initQuiz();
+    });
+
+    // Initialisation
+    initQuiz();
+  </script>
+</body>
+</html>
