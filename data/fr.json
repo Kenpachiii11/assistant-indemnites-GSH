@@ -1,0 +1,302 @@
+[
+  {
+    "name": {
+      "fr": "Salaire de base",
+      "ar": "الراتب الأساسي",
+      "en": "Basic salary"
+    },
+    "abbreviations": ["SB", "salaire"],
+    "definition": {
+      "fr": "Rémunération fixe principale convenue dans le contrat de travail pour la prestation de travail de base.",
+      "ar": "الأجر الأساسي المتفق عليه في عقد العمل لأداء العمل الأساسي.",
+      "en": "Fixed main remuneration agreed in the employment contract for basic work performance."
+    },
+    "cotisable": "Oui",
+    "imposable": "Oui",
+    "reason": {
+      "fr": "Contrat de travail, Loi 90-11 (Code du Travail), Loi 83-14, CIDTA Art. 66",
+      "ar": "عقد العمل، القانون 90-11 (قانون العمل)، القانون 83-14، المادة 66 من الاتفاقية",
+      "en": "Employment contract, Law 90-11 (Labor Code), Law 83-14, CIDTA Art. 66"
+    },
+    "keywords": {
+      "fr": ["base", "fixe", "rémunération"],
+      "ar": ["أساسي", "ثابت", "أجر"],
+      "en": ["base", "fixed", "remuneration"]
+    }
+  },
+  {
+    "name": {
+      "fr": "Heures supplémentaires",
+      "ar": "ساعات إضافية",
+      "en": "Overtime hours"
+    },
+    "abbreviations": ["HS", "h.sup"],
+    "definition": {
+      "fr": "Rémunération majorée pour les heures de travail effectuées au-delà de la durée légale hebdomadaire.",
+      "ar": "أجر إضافي لساعات العمل التي تزيد عن المدة القانونية الأسبوعية.",
+      "en": "Increased remuneration for hours worked beyond the standard weekly duration."
+    },
+    "cotisable": "Oui",
+    "imposable": "Oui",
+    "reason": {
+      "fr": "Article 31 et suivants du Code du Travail (Loi 90-11)",
+      "ar": "المادة 31 وما يليها من قانون العمل (القانون 90-11)",
+      "en": "Article 31 and following of the Labor Code (Law 90-11)"
+    },
+    "keywords": {
+      "fr": ["extra", "supplément", "temps"],
+      "ar": ["إضافي", "زيادة", "وقت"],
+      "en": ["extra", "overtime", "time"]
+    }
+  },
+  {
+    "name": {
+      "fr": "Prime de rendement / de productivité",
+      "ar": "عائد الأداء / الإنتاجية",
+      "en": "Performance / Productivity bonus"
+    },
+    "abbreviations": ["PRP", "prime perf"],
+    "definition": {
+      "fr": "Montant variable versé en fonction de la performance quantitative ou qualitative, individuelle ou collective.",
+      "ar": "مبلغ متغير يتم دفعه بناءً على الأداء الكمي أو النوعي، الفردي أو الجماعي.",
+      "en": "Variable amount paid based on quantitative or qualitative performance, individual or collective."
+    },
+    "cotisable": "Oui",
+    "imposable": "Oui",
+    "reason": {
+      "fr": "Convention collective, accord d'entreprise, contrat de travail ; Principe général CIDTA Art. 66 / Loi 83-14",
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة، عقد عمل؛ المبدأ العام المادة 66 من الاتفاقية / القانون 83-14",
+      "en": "Collective agreement, company agreement, employment contract; General principle CIDTA Art. 66 / Law 83-14"
+    },
+    "keywords": {
+      "fr": ["performance", "bonus", "résultats"],
+      "ar": ["أداء", "مكافأة", "نتائج"],
+      "en": ["performance", "bonus", "results"]
+    }
+  },
+  {
+    "name": {
+      "fr": "Prime d'objectif",
+      "ar": "مكافأة تحقيق الهدف",
+      "en": "Target bonus"
+    },
+    "abbreviations": ["PO", "prime obj"],
+    "definition": {
+      "fr": "Prime versée lors de l'atteinte d'objectifs prédéfinis.",
+      "ar": "مكافأة يتم دفعها عند تحقيق الأهداف المحددة مسبقًا.",
+      "en": "Bonus paid when predefined objectives are achieved."
+    },
+    "cotisable": "Oui",
+    "imposable": "Oui",
+    "reason": {
+      "fr": "Convention collective, accord d'entreprise, contrat de travail ; Principe général CIDTA Art. 66 / Loi 83-14",
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة، عقد عمل؛ المبدأ العام المادة 66 من الاتفاقية / القانون 83-14",
+      "en": "Collective agreement, company agreement, employment contract; General principle CIDTA Art. 66 / Law 83-14"
+    },
+    "keywords": {
+      "fr": ["cible", "performance", "kpi"],
+      "ar": ["هدف", "أداء", "مؤشر أداء"],
+      "en": ["target", "performance", "kpi"]
+    }
+  },
+  {
+    "name": {
+      "fr": "Prime d'ancienneté",
+      "ar": "مكافأة الأقدمية",
+      "en": "Seniority bonus"
+    },
+    "abbreviations": ["PA", "prime ancien"],
+    "definition": {
+      "fr": "Supplément de salaire calculé en fonction du nombre d'années de service du salarié dans l'entreprise.",
+      "ar": "مبلغ إضافي يحسب بناءً على عدد سنوات خدمة الموظف في الشركة.",
+      "en": "Salary supplement calculated based on the number of years of service in the company."
+    },
+    "cotisable": "Oui",
+    "imposable": "Oui",
+    "reason": {
+      "fr": "Convention collective, accord d'entreprise ; Principe général CIDTA Art. 66 / Loi 83-14",
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة؛ المبدأ العام المادة 66 من الاتفاقية / القانون 83-14",
+      "en": "Collective agreement, company agreement; General principle CIDTA Art. 66 / Law 83-14"
+    },
+    "keywords": {
+      "fr": ["expérience", "seniorité", "années"],
+      "ar": ["خبرة", "أقدمية", "سنوات"],
+      "en": ["experience", "seniority", "years"]
+    }
+  },
+  {
+    "name": {
+      "fr": "Indemnité d'expérience professionnelle (IEP)",
+      "ar": "بدل الخبرة المهنية",
+      "en": "Professional experience allowance"
+    },
+    "abbreviations": ["IEP", "exp pro"],
+    "definition": {
+      "fr": "Indemnité visant à valoriser l'expérience acquise par le salarié, souvent liée à l'ancienneté.",
+      "ar": "بدل يهدف إلى تعزيز الخبرة المكتسبة من قبل الموظف، وغالبًا ما ترتبط بالأقدمية.",
+      "en": "Allowance aimed at enhancing the experience acquired by the employee, often related to seniority."
+    },
+    "cotisable": "Oui",
+    "imposable": "Oui",
+    "reason": {
+      "fr": "Convention collective, accord d'entreprise ; Principe général CIDTA Art. 66 / Loi 83-14",
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة؛ المبدأ العام المادة 66 من الاتفاقية / القانون 83-14",
+      "en": "Collective agreement, company agreement; General principle CIDTA Art. 66 / Law 83-14"
+    },
+    "keywords": {
+      "fr": ["expérience", "compétences", "valorisation"],
+      "ar": ["خبرة", "مهارات", "تعزيز"],
+      "en": ["experience", "skills", "enhancement"]
+    }
+  },
+  {
+    "name": {
+      "fr": "Prime de fin d'année / 13ème mois",
+      "ar": "مكافأة نهاية السنة / الراتب الثالث عشر",
+      "en": "Year-end bonus / 13th month"
+    },
+    "abbreviations": ["PFA", "13 mois"],
+    "definition": {
+      "fr": "Prime annuelle, souvent équivalente à un mois de salaire, versée généralement en fin d'année.",
+      "ar": "مكافأة سنوية، غالبًا ما تعادل راتب شهر واحد، تدفع عادة في نهاية السنة.",
+      "en": "Annual bonus, often equivalent to one month's salary, usually paid at year-end."
+    },
+    "cotisable": "Oui",
+    "imposable": "Oui",
+    "reason": {
+      "fr": "Convention collective, accord d'entreprise, contrat de travail ou usage",
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة، عقد عمل أو العرف",
+      "en": "Collective agreement, company agreement, employment contract or practice"
+    },
+    "keywords": {
+      "fr": ["annuel", "bonus", "décembre"],
+      "ar": ["سنوي", "مكافأة", "ديسمبر"],
+      "en": ["annual", "bonus", "December"]
+    }
+  },
+  {
+    "name": {
+      "fr": "Gratifications diverses",
+      "ar": "مكافآت متنوعة",
+      "en": "Various bonuses"
+    },
+    "abbreviations": ["GD", "prime excep"],
+    "definition": {
+      "fr": "Primes exceptionnelles non récurrentes (ex: Aïd, naissance, mariage, résultats exceptionnels).",
+      "ar": "مكافآت استثنائية غير متكررة (مثل العيد، الميلاد، الزواج، نتائج استثنائية).",
+      "en": "Non-recurring exceptional bonuses (e.g., Eid, birth, marriage, exceptional results)."
+    },
+    "cotisable": "Oui",
+    "imposable": "Oui",
+    "reason": {
+      "fr": "Politique de l'entreprise, usage ; Principe général CIDTA Art. 66 / Loi 83-14",
+      "ar": "سياسة الشركة، العرف؛ المبدأ العام المادة 66 من الاتفاقية / القانون 83-14",
+      "en": "Company policy, practice; General principle CIDTA Art. 66 / Law 83-14"
+    },
+    "keywords": {
+      "fr": ["cadeau", "fête", "exceptionnel"],
+      "ar": ["هدية", "مناسبة", "استثنائي"],
+      "en": ["gift", "celebration", "exceptional"]
+    }
+  },
+  {
+    "name": {
+      "fr": "Prime de vacances",
+      "ar": "مكافأة العطلة",
+      "en": "Vacation bonus"
+    },
+    "abbreviations": ["PV", "prime vac"],
+    "definition": {
+      "fr": "Somme additionnelle (distincte de l'indemnité de congés payés) versée au moment du départ en congé annuel.",
+      "ar": "مبلغ إضافي (مختلف عن بدل الإجازة) يدفع عند الذهاب في الإجازة السنوية.",
+      "en": "Additional amount (separate from paid leave allowance) paid when going on annual leave."
+    },
+    "cotisable": "Oui",
+    "imposable": "Oui",
+    "reason": {
+      "fr": "Convention collective, accord d'entreprise",
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة",
+      "en": "Collective agreement, company agreement"
+    },
+    "keywords": {
+      "fr": ["été", "repos", "congé"],
+      "ar": ["صيف", "راحة", "إجازة"],
+      "en": ["summer", "rest", "leave"]
+    }
+  },
+  {
+    "name": {
+      "fr": "Indemnité de travail posté / par équipe",
+      "ar": "بدل العمل بنظام الورديات",
+      "en": "Shift work allowance"
+    },
+    "abbreviations": ["ITP", "shift"],
+    "definition": {
+      "fr": "Compensation pour les contraintes liées au travail organisé par équipes successives (shifts).",
+      "ar": "تعويض عن صعوبات العمل بنظام الورديات المتعاقبة.",
+      "en": "Compensation for difficulties of organized shift work."
+    },
+    "cotisable": "Oui",
+    "imposable": "Oui",
+    "reason": {
+      "fr": "Article 30 du Code du Travail (Loi 90-11), convention collective",
+      "ar": "المادة 30 من قانون العمل (القانون 90-11)، اتفاقية جماعية",
+      "en": "Article 30 of the Labor Code (Law 90-11), collective agreement"
+    },
+    "keywords": {
+      "fr": ["équipe", "rotation", "horaires"],
+      "ar": ["فريق", "تبادل", "مواعيد"],
+      "en": ["team", "rotation", "schedules"]
+    }
+  },
+  {
+    "name": {
+      "fr": "Solde tout compte",
+      "ar": "تسوية نهائية",
+      "en": "Final settlement"
+    },
+    "abbreviations": ["STC", "Solde"],
+    "definition": {
+      "fr": "Document récapitulatif des sommes dues en fin de contrat.",
+      "ar": "وثيقة تلخص المبالغ المستحقة في نهاية العقد.",
+      "en": "Document summarizing amounts due at the end of the contract."
+    },
+    "cotisable": "Variable",
+    "imposable": "Variable",
+    "reason": {
+      "fr": "Article 73 Code du Travail",
+      "ar": "المادة 73 من قانون العمل",
+      "en": "Article 73 of the Labor Code"
+    },
+    "keywords": {
+      "fr": ["rupture", "liquidation", "final"],
+      "ar": ["إنهاء", "تسوية", "نهائي"],
+      "en": ["termination", "settlement", "final"]
+    }
+  },
+  {
+    "name": {
+      "fr": "PCS (Prévoyance sociale complémentaire)",
+      "ar": "التأمين الاجتماعي التكميلي",
+      "en": "Complementary social insurance"
+    },
+    "abbreviations": ["PCS", "Prévoy."],
+    "definition": {
+      "fr": "Contribution facultative pour couverture sociale complémentaire.",
+      "ar": "مساهمة اختيارية للتغطية الاجتماعية التكميلية.",
+      "en": "Optional contribution for complementary social coverage."
+    },
+    "cotisable": "Non",
+    "imposable": "Conditionnel",
+    "reason": {
+      "fr": "Accords d'entreprise",
+      "ar": "اتفاقيات المؤسسة",
+      "en": "Company agreements"
+    },
+    "keywords": {
+      "fr": ["mutuelle", "retraite", "complémentaire"],
+      "ar": ["تأمين", "تقاعد", "تكميلي"],
+      "en": ["insurance", "retirement", "complementary"]
+    }
+  }
+]

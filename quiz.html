@@ -6,7 +6,6 @@
   <title>Quiz sur les Indemnités Algériennes</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Quiz specific styles that won't conflict with main styles */
     .quiz-container {
       max-width: 100% !important;
       margin: 0 !important;
@@ -124,7 +123,7 @@
 </head>
 <body>
   <div class="quiz-container">
-    <h1>Quiz sur les Indemnités en Droit du Travail Algérien</h1>
+    <h1 id="quiz-title">Quiz sur les Indemnités en Droit du Travail Algérien</h1>
     <div class="progress-bar">
       <div class="progress" id="progress"></div>
     </div>
@@ -136,88 +135,104 @@
     <div class="controls">
       <button id="prevBtn" disabled>Précédent</button>
       <div class="score-container">
-        Question: <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
+        <span id="question-text">Question:</span> <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
       </div>
       <button id="nextBtn" disabled>Suivant</button>
     </div>
     <div id="results" style="display: none;">
-      <h2>Résultats du Quiz</h2>
-      <p>Votre score: <span id="score">0</span>/<span id="totalScore">0</span></p>
+      <h2 id="results-title">Résultats du Quiz</h2>
+      <p id="score-text">Votre score: <span id="score">0</span>/<span id="totalScore">0</span></p>
       <button id="restartBtn">Recommencer le Quiz</button>
     </div>
   </div>
 
   <script>
-    const quizData = [
-      {
-        question: "Quelle est l'indemnité due à un travailleur en cas de déplacement temporaire?",
-        options: ["10% du salaire de base", "25% du salaire de base", "50% du salaire de base", "Aucune indemnité"],
-        correct: 1,
-        explanation: "Le Code du Travail prévoit 25% du salaire de base pour les déplacements temporaires."
+    const quizTranslations = {
+      fr: {
+        "quiz-title": "Quiz sur les Indemnités en Droit du Travail Algérien",
+        "question-text": "Question",
+        "results-title": "Résultats du Quiz",
+        "score-text": "Votre score",
+        "prev-btn": "Précédent",
+        "next-btn": "Suivant",
+        "restart-btn": "Recommencer",
+        "see-results": "Voir Résultats"
       },
-      {
-        question: "Pendant combien de temps est versée l'indemnité de zone ?",
-        options: ["3 mois", "6 mois", "Durée totale de l'affectation", "1 an"],
-        correct: 2,
-        explanation: "L'indemnité de zone est versée pendant toute la durée de l'affectation."
+      ar: {
+        "quiz-title": "اختبار التعويضات في قانون العمل الجزائري",
+        "question-text": "سؤال",
+        "results-title": "نتائج الاختبار",
+        "score-text": "نتيجتك",
+        "prev-btn": "السابق",
+        "next-btn": "التالي",
+        "restart-btn": "إعادة الاختبار",
+        "see-results": "رؤية النتائج"
       },
-      {
-        question: "Quelle indemnité compense les risques professionnels ?",
-        options: ["Indemnité de panier", "Indemnité de risque", "Prime de transport", "Prime d'ancienneté"],
-        correct: 1,
-        explanation: "L'indemnité de risque est prévue pour les travaux dangereux."
-      },
-      {
-        question: "Quel pourcentage pour les heures supplémentaires de nuit ?",
-        options: ["30%", "50%", "75%", "100%"],
-        correct: 3,
-        explanation: "Les heures de nuit donnent droit à une majoration de 100%."
-      },
-      {
-        question: "Quelle prime est liée à l'ancienneté ?",
-        options: ["Prime de rendement", "Prime de vacances", "Prime d'ancienneté", "Prime de bilan"],
-        correct: 2,
-        explanation: "La prime d'ancienneté récompense la fidélité dans l'entreprise."
-      },
-      {
-        question: "Quelle indemnité pour utilisation de véhicule personnel ?",
-        options: ["Indemnité kilométrique", "Prime de déplacement", "Indemnité carburant", "Prime véhicule"],
-        correct: 0,
-        explanation: "L'indemnité kilométrique couvre l'usage du véhicule personnel."
-      },
-      {
-        question: "Quelle est la durée maximale de la période d'essai en CDI ?",
-        options: ["3 mois", "6 mois", "12 mois", "18 mois"],
-        correct: 1,
-        explanation: "La période d'essai maximale pour un CDI est de 6 mois."
-      },
-      {
-        question: "Quel texte régit les conventions collectives ?",
-        options: ["Loi 90-11", "Loi 88-07", "Décret 95-39", "Ordonnance 75-31"],
-        correct: 0,
-        explanation: "La Loi 90-11 encadre les conventions collectives."
-      },
-      {
-        question: "Quelle indemnité en cas de licenciement abusif ?",
-        options: ["1 mois/salairé", "2 mois/salairé", "3 mois/salairé", "6 mois/salairé"],
-        correct: 2,
-        explanation: "Le Code du Travail prévoit minimum 3 mois de salaire."
-      },
-      {
-        question: "Quelle majoration pour travail le jour férié ?",
-        options: ["50%", "75%", "100%", "150%"],
-        correct: 2,
-        explanation: "Travail un jour férié donne droit à 100% de majoration."
+      en: {
+        "quiz-title": "Algerian Labor Allowances Quiz",
+        "question-text": "Question",
+        "results-title": "Quiz Results",
+        "score-text": "Your score",
+        "prev-btn": "Previous",
+        "next-btn": "Next",
+        "restart-btn": "Restart Quiz",
+        "see-results": "See Results"
       }
-    ];
+    };
 
+    const quizData = {
+      fr: [
+        {
+          question: "Quelle est l'indemnité due à un travailleur en cas de déplacement temporaire?",
+          options: ["10% du salaire de base", "25% du salaire de base", "50% du salaire de base", "Aucune indemnité"],
+          correct: 1,
+          explanation: "Le Code du Travail prévoit 25% du salaire de base pour les déplacements temporaires."
+        },
+        {
+          question: "Pendant combien de temps est versée l'indemnité de zone ?",
+          options: ["3 mois", "6 mois", "Durée totale de l'affectation", "1 an"],
+          correct: 2,
+          explanation: "L'indemnité de zone est versée pendant toute la durée de l'affectation."
+        }
+      ],
+      ar: [
+        {
+          question: "ما هو التعويض المستحق للعامل في حالة الانتقال المؤقت؟",
+          options: ["10٪ من الراتب الأساسي", "25٪ من الراتب الأساسي", "50٪ من الراتب الأساسي", "لا يوجد تعويض"],
+          correct: 1,
+          explanation: "ينص قانون العمل على 25٪ من الراتب الأساسي للانتقالات المؤقتة."
+        },
+        {
+          question: "كم من الوقت يتم دفع بدل المنطقة؟",
+          options: ["3 أشهر", "6 أشهر", "طوال مدة التكليف", "سنة واحدة"],
+          correct: 2,
+          explanation: "يتم دفع بدل المنطقة طوال مدة التكليف."
+        }
+      ],
+      en: [
+        {
+          question: "What is the allowance due to a worker in case of temporary transfer?",
+          options: ["10% of basic salary", "25% of basic salary", "50% of basic salary", "No allowance"],
+          correct: 1,
+          explanation: "The Labor Code provides for 25% of basic salary for temporary transfers."
+        },
+        {
+          question: "For how long is the zone allowance paid?",
+          options: ["3 months", "6 months", "Entire duration of assignment", "1 year"],
+          correct: 2,
+          explanation: "The zone allowance is paid for the entire duration of assignment."
+        }
+      ]
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    let currentLanguage = urlParams.get('lang') || 'fr';
     let currentQuizData = [];
     let currentQuestion = 0;
     let score = 0;
     let questionAnswered = false;
     let userAnswers = [];
 
-    // Éléments DOM
     const questionEl = document.getElementById('question');
     const optionsEl = document.getElementById('options');
     const feedbackEl = document.getElementById('feedback');
@@ -231,25 +246,38 @@
     const totalScoreEl = document.getElementById('totalScore');
     const restartBtn = document.getElementById('restartBtn');
     const questionContainerEl = document.getElementById('questionContainer');
+    const quizTitleEl = document.getElementById('quiz-title');
+    const questionTextEl = document.getElementById('question-text');
+    const resultsTitleEl = document.getElementById('results-title');
+    const scoreTextEl = document.getElementById('score-text');
 
-    // Mélange Fisher-Yates
+    function initQuiz() {
+      currentQuizData = [...quizData[currentLanguage]];
+      totalQuestionsEl.textContent = currentQuizData.length;
+      totalScoreEl.textContent = currentQuizData.length;
+      currentQuestion = 0;
+      score = 0;
+      userAnswers = new Array(currentQuizData.length).fill(-1);
+      
+      const translations = quizTranslations[currentLanguage];
+      quizTitleEl.textContent = translations['quiz-title'];
+      questionTextEl.textContent = translations['question-text'];
+      resultsTitleEl.textContent = translations['results-title'];
+      scoreTextEl.textContent = translations['score-text'];
+      prevBtn.textContent = translations['prev-btn'];
+      nextBtn.textContent = translations['next-btn'];
+      restartBtn.textContent = translations['restart-btn'];
+      
+      showQuestion(currentQuestion);
+      updateControls();
+    }
+
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
       }
       return array;
-    }
-
-    function initQuiz() {
-      currentQuizData = shuffleArray([...quizData]);
-      totalQuestionsEl.textContent = quizData.length;
-      totalScoreEl.textContent = quizData.length;
-      currentQuestion = 0;
-      score = 0;
-      userAnswers = new Array(currentQuizData.length).fill(-1);
-      showQuestion(currentQuestion);
-      updateControls();
     }
 
     function showQuestion(index) {
@@ -314,7 +342,8 @@
     function updateControls() {
       prevBtn.disabled = currentQuestion === 0;
       nextBtn.disabled = !questionAnswered && userAnswers[currentQuestion] === -1;
-      nextBtn.textContent = currentQuestion === currentQuizData.length - 1 && questionAnswered ? 'Voir Résultats' : 'Suivant';
+      nextBtn.textContent = currentQuestion === currentQuizData.length - 1 && questionAnswered ? 
+        quizTranslations[currentLanguage]['see-results'] : quizTranslations[currentLanguage]['next-btn'];
     }
 
     function showResults() {
@@ -336,20 +365,4 @@
       if (currentQuestion < currentQuizData.length - 1) {
         currentQuestion++;
         showQuestion(currentQuestion);
-        questionAnswered = userAnswers[currentQuestion] !== -1;
-        updateControls();
-      } else showResults();
-    });
-
-    restartBtn.addEventListener('click', () => {
-      questionContainerEl.style.display = 'block';
-      document.querySelector('.controls').style.display = 'flex';
-      resultsEl.style.display = 'none';
-      initQuiz();
-    });
-
-    // Initialisation
-    initQuiz();
-  </script>
-</body>
-</html>
+        questionAnswered =

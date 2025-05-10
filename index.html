@@ -12,8 +12,13 @@
       <img src="./assets/gsh-logo.webp" alt="GSH Logo" class="logo" 
            onerror="this.onerror=null; this.src='./assets/gsh-logo.png'">
       <div class="header-text">
-        <h1>🇩🇿 Assistant des Indemnités</h1>
-        <p class="subtitle">Référence: Code du Travail Algérien (Loi 90-11)</p>
+        <h1 id="main-title">🇩🇿 Assistant des Indemnités</h1>
+        <p class="subtitle" id="subtitle">Référence: Code du Travail Algérien (Loi 90-11)</p>
+      </div>
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
       </div>
     </div>
   </header>
@@ -30,7 +35,7 @@
     <div class="pdf-container">
       <div class="pdf-controls">
         <button id="togglePdfBtn">Afficher/Masquer PDF</button>
-        <span class="pdf-reference">Décret 96-208 Art. 2</span>
+        <span class="pdf-reference" id="pdfRef">Décret 96-208 Art. 2</span>
       </div>
       <embed id="pdfViewer" src="./assets/code-travail.pdf#page=1" type="application/pdf">
     </div>
@@ -40,10 +45,13 @@
   <div id="quizModal" class="modal">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
-      <iframe src="quiz.html" class="quiz-iframe"></iframe>
+      <iframe src="quiz.html" class="quiz-iframe" id="quizIframe"></iframe>
     </div>
   </div>
 
+  <button class="quiz-btn" id="quizBtn">Quiz</button>
+
   <script src="app.js"></script>
+  <script src="lang.js"></script>
 </body>
 </html>

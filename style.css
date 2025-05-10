@@ -8,7 +8,6 @@
   --legal-reference: #5c6bc0;
 }
 
-/* Header & Main Structure */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
@@ -60,7 +59,6 @@ h1 {
   font-weight: 500;
 }
 
-/* Main Content Layout */
 .main-container {
   display: flex;
   min-height: calc(100vh - 110px);
@@ -105,7 +103,6 @@ button:hover {
   background: #004494;
 }
 
-/* Results Section */
 .results-container {
   background: white;
   border-radius: 6px;
@@ -127,12 +124,6 @@ button:hover {
   font-size: 1.2rem;
 }
 
-.abbreviations {
-  font-size: 0.9rem;
-  color: #666;
-  font-weight: normal;
-}
-
 .property-line {
   margin: 10px 0;
   font-size: 0.95rem;
@@ -151,7 +142,6 @@ button:hover {
   margin-top: 3px;
 }
 
-/* Status Indicators */
 .cotisable-oui, .imposable-oui {
   color: var(--cotisable-oui);
   font-weight: 600;
@@ -186,7 +176,6 @@ button:hover {
   color: #555;
 }
 
-/* PDF Viewer */
 .pdf-container {
   flex: 1;
   min-width: 450px;
@@ -215,7 +204,6 @@ button:hover {
   font-style: italic;
 }
 
-/* Quiz Button & Modal Styles */
 .quiz-btn {
   position: fixed;
   bottom: 30px;
@@ -245,7 +233,6 @@ button:hover {
   transform: scale(0.95);
 }
 
-/* Modal Styles */
 .modal {
   display: none;
   position: fixed;
@@ -311,7 +298,64 @@ button:hover {
   border-radius: 8px;
 }
 
-/* Responsive Design */
+.language-switcher {
+  display: flex;
+  gap: 5px;
+  margin-left: 20px;
+}
+
+.lang-btn {
+  padding: 5px 10px;
+  background: #f0f0f0;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.lang-btn:hover {
+  background: #e0e0e0;
+}
+
+.lang-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+body.rtl {
+  direction: rtl;
+}
+
+body.rtl .header-content {
+  flex-direction: row-reverse;
+}
+
+body.rtl .search-box,
+body.rtl .pdf-controls {
+  flex-direction: row-reverse;
+}
+
+body.rtl .indemnity-card h3 {
+  text-align: right;
+}
+
+body.rtl .definition,
+body.rtl .property-line,
+body.rtl .reference {
+  text-align: right;
+}
+
+body.rtl .keywords {
+  justify-content: flex-end;
+}
+
+body.rtl .exoneration-reason {
+  border-left: none;
+  border-right: 3px solid var(--secondary);
+}
+
 @media (max-width: 1024px) {
   .main-container {
     flex-direction: column;
@@ -365,5 +409,10 @@ button:hover {
   
   .quiz-iframe {
     height: 85vh;
+  }
+
+  .language-switcher {
+    margin-left: 0;
+    margin-top: 10px;
   }
 }

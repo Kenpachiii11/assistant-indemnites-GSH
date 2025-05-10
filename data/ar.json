@@ -1,0 +1,1032 @@
+[
+  {
+    "name": {
+      "ar": "الراتب الأساسي",
+      "fr": "Salaire de base",
+      "en": "Basic salary"
+    },
+    "abbreviations": ["SB", "salaire"],
+    "definition": {
+      "ar": "الأجر الأساسي المتفق عليه في عقد العمل لأداء العمل الأساسي.",
+      "fr": "Rémunération fixe principale convenue dans le contrat de travail pour la prestation de travail de base.",
+      "en": "Fixed main remuneration agreed in the employment contract for basic work performance."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "عقد العمل، القانون 90-11 (قانون العمل)، القانون 83-14، المادة 66 من الاتفاقية",
+      "fr": "Contrat de travail, Loi 90-11 (Code du Travail), Loi 83-14, CIDTA Art. 66",
+      "en": "Employment contract, Law 90-11 (Labor Code), Law 83-14, CIDTA Art. 66"
+    },
+    "keywords": {
+      "ar": ["أساسي", "ثابت", "أجر"],
+      "fr": ["base", "fixe", "rémunération"],
+      "en": ["base", "fixed", "remuneration"]
+    }
+  },
+  {
+    "name": {
+      "ar": "ساعات إضافية",
+      "fr": "Heures supplémentaires",
+      "en": "Overtime hours"
+    },
+    "abbreviations": ["HS", "h.sup"],
+    "definition": {
+      "ar": "أجر إضافي لساعات العمل التي تزيد عن المدة القانونية الأسبوعية.",
+      "fr": "Rémunération majorée pour les heures de travail effectuées au-delà de la durée légale hebdomadaire.",
+      "en": "Increased remuneration for hours worked beyond the standard weekly duration."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "المادة 31 وما يليها من قانون العمل (القانون 90-11)",
+      "fr": "Article 31 et suivants du Code du Travail (Loi 90-11)",
+      "en": "Article 31 and following of the Labor Code (Law 90-11)"
+    },
+    "keywords": {
+      "ar": ["إضافي", "زيادة", "وقت"],
+      "fr": ["extra", "supplément", "temps"],
+      "en": ["extra", "overtime", "time"]
+    }
+  },
+  {
+    "name": {
+      "ar": "عائد الأداء / الإنتاجية",
+      "fr": "Prime de rendement / de productivité",
+      "en": "Performance / Productivity bonus"
+    },
+    "abbreviations": ["PRP", "prime perf"],
+    "definition": {
+      "ar": "مبلغ متغير يتم دفعه بناءً على الأداء الكمي أو النوعي، الفردي أو الجماعي.",
+      "fr": "Montant variable versé en fonction de la performance quantitative ou qualitative, individuelle ou collective.",
+      "en": "Variable amount paid based on quantitative or qualitative performance, individual or collective."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة، عقد عمل؛ المبدأ العام المادة 66 من الاتفاقية / القانون 83-14",
+      "fr": "Convention collective, accord d'entreprise, contrat de travail ; Principe général CIDTA Art. 66 / Loi 83-14",
+      "en": "Collective agreement, company agreement, employment contract; General principle CIDTA Art. 66 / Law 83-14"
+    },
+    "keywords": {
+      "ar": ["أداء", "مكافأة", "نتائج"],
+      "fr": ["performance", "bonus", "résultats"],
+      "en": ["performance", "bonus", "results"]
+    }
+  },
+  {
+    "name": {
+      "ar": "مكافأة تحقيق الهدف",
+      "fr": "Prime d'objectif",
+      "en": "Target bonus"
+    },
+    "abbreviations": ["PO", "prime obj"],
+    "definition": {
+      "ar": "مكافأة يتم دفعها عند تحقيق الأهداف المحددة مسبقًا.",
+      "fr": "Prime versée lors de l'atteinte d'objectifs prédéfinis.",
+      "en": "Bonus paid when predefined objectives are achieved."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة، عقد عمل؛ المبدأ العام المادة 66 من الاتفاقية / القانون 83-14",
+      "fr": "Convention collective, accord d'entreprise, contrat de travail ; Principe général CIDTA Art. 66 / Loi 83-14",
+      "en": "Collective agreement, company agreement, employment contract; General principle CIDTA Art. 66 / Law 83-14"
+    },
+    "keywords": {
+      "ar": ["هدف", "أداء", "مؤشر أداء"],
+      "fr": ["cible", "performance", "kpi"],
+      "en": ["target", "performance", "kpi"]
+    }
+  },
+  {
+    "name": {
+      "ar": "مكافأة الأقدمية",
+      "fr": "Prime d'ancienneté",
+      "en": "Seniority bonus"
+    },
+    "abbreviations": ["PA", "prime ancien"],
+    "definition": {
+      "ar": "مكمل للراتب يحسب بناءً على عدد سنوات خدمة الموظف في الشركة.",
+      "fr": "Supplément de salaire calculé en fonction du nombre d'années de service du salarié dans l'entreprise.",
+      "en": "Salary supplement calculated based on the number of years of service of the employee in the company."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة؛ المبدأ العام المادة 66 من الاتفاقية / القانون 83-14",
+      "fr": "Convention collective, accord d'entreprise ; Principe général CIDTA Art. 66 / Loi 83-14",
+      "en": "Collective agreement, company agreement; General principle CIDTA Art. 66 / Law 83-14"
+    },
+    "keywords": {
+      "ar": ["خبرة", "أقدمية", "سنوات"],
+      "fr": ["expérience", "seniorité", "années"],
+      "en": ["experience", "seniority", "years"]
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل الخبرة المهنية (IEP)",
+      "fr": "Indemnité d'expérience professionnelle (IEP)",
+      "en": "Professional experience allowance (IEP)"
+    },
+    "abbreviations": ["IEP", "exp pro"],
+    "definition": {
+      "ar": "بدل يهدف إلى تقييم الخبرة المكتسبة من قبل الموظف، غالبًا ما تكون مرتبطة بالأقدمية.",
+      "fr": "Indemnité visant à valoriser l'expérience acquise par le salarié, souvent liée à l'ancienneté.",
+      "en": "Allowance aimed at valuing the experience acquired by the employee, often linked to seniority."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة؛ المبدأ العام المادة 66 من الاتفاقية / القانون 83-14",
+      "fr": "Convention collective, accord d'entreprise ; Principe général CIDTA Art. 66 / Loi 83-14",
+      "en": "Collective agreement, company agreement; General principle CIDTA Art. 66 / Law 83-14"
+    },
+    "keywords": {
+      "ar": ["خبرة", "مهارات", "تقييم"],
+      "fr": ["expérience", "compétences", "valorisation"],
+      "en": ["experience", "skills", "valuation"]
+    }
+  },
+  {
+    "name": {
+      "ar": "مكافأة نهاية العام / الراتب الثالث عشر",
+      "fr": "Prime de fin d'année / 13ème mois",
+      "en": "Year-end bonus / 13th month"
+    },
+    "abbreviations": ["PFA", "13 mois"],
+    "definition": {
+      "ar": "مكافأة سنوية، غالبًا ما تعادل راتب شهر واحد، تدفع عادة في نهاية العام.",
+      "fr": "Prime annuelle, souvent équivalente à un mois de salaire, versée généralement en fin d'année.",
+      "en": "Annual bonus, often equivalent to one month's salary, usually paid at the end of the year."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة، عقد عمل أو عرف",
+      "fr": "Convention collective, accord d'entreprise, contrat de travail ou usage",
+      "en": "Collective agreement, company agreement, employment contract or custom"
+    },
+    "keywords": {
+      "ar": ["سنوي", "مكافأة", "ديسمبر"],
+      "fr": ["annuel", "bonus", "décembre"],
+      "en": ["annual", "bonus", "December"]
+    }
+  },
+  {
+    "name": {
+      "ar": "مكافآت متنوعة",
+      "fr": "Gratifications diverses",
+      "en": "Various gratifications"
+    },
+    "abbreviations": ["GD", "prime excep"],
+    "definition": {
+      "ar": "مكافآت استثنائية غير متكررة (مثل العيد، الميلاد، الزواج، نتائج استثنائية).",
+      "fr": "Primes exceptionnelles non récurrentes (ex: Aïd, naissance, mariage, résultats exceptionnels).",
+      "en": "Exceptional non-recurring bonuses (e.g., Eid, birth, marriage, exceptional results)."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "سياسة الشركة، عرف؛ المبدأ العام المادة 66 من الاتفاقية / القانون 83-14",
+      "fr": "Politique de l'entreprise, usage ; Principe général CIDTA Art. 66 / Loi 83-14",
+      "en": "Company policy, custom; General principle CIDTA Art. 66 / Law 83-14"
+    },
+    "keywords": {
+      "ar": ["هدية", "احتفال", "استثنائي"],
+      "fr": ["cadeau", "fête", "exceptionnel"],
+      "en": ["gift", "celebration", "exceptional"]
+    }
+  },
+  {
+    "name": {
+      "ar": "مكافأة العطلة",
+      "fr": "Prime de vacances",
+      "en": "Vacation bonus"
+    },
+    "abbreviations": ["PV", "prime vac"],
+    "definition": {
+      "ar": "مبلغ إضافي (مختلف عن بدل الإجازة المدفوعة) يدفع عند الذهاب في الإجازة السنوية.",
+      "fr": "Somme additionnelle (distincte de l'indemnité de congés payés) versée au moment du départ en congé annuel.",
+      "en": "Additional sum (distinct from paid leave allowance) paid at the time of annual leave."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة",
+      "fr": "Convention collective, accord d'entreprise",
+      "en": "Collective agreement, company agreement"
+    },
+    "keywords": {
+      "ar": ["صيف", "راحة", "إجازة"],
+      "fr": ["été", "repos", "congé"],
+      "en": ["summer", "rest", "leave"]
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل العمل بنظام الورديات / الفريق",
+      "fr": "Indemnité de travail posté / par équipe",
+      "en": "Shift work allowance / Team allowance"
+    },
+    "abbreviations": ["ITP", "shift"],
+    "definition": {
+      "ar": "تعويض عن القيود المتعلقة بالعمل المنظم بواسطة فرق متعاقبة (ورديات).",
+      "fr": "Compensation pour les contraintes liées au travail organisé par équipes successives (shifts).",
+      "en": "Compensation for constraints related to work organized by successive teams (shifts)."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "المادة 30 من قانون العمل (القانون 90-11)، اتفاقية جماعية",
+      "fr": "Article 30 du Code du Travail (Loi 90-11), convention collective",
+      "en": "Article 30 of the Labor Code (Law 90-11), collective agreement"
+    },
+    "keywords": {
+      "ar": ["فريق", "تناوب", "ساعات"],
+      "fr": ["équipe", "rotation", "horaires"],
+      "en": ["team", "rotation", "hours"]
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل العمل الليلي",
+      "fr": "Indemnité de travail de nuit",
+      "en": "Night work allowance"
+    },
+    "abbreviations": ["ITN", "nuit"],
+    "definition": {
+      "ar": "زيادة في الراتب لساعات العمل خلال الفترة الزمنية المحددة كـ 'ليل'.",
+      "fr": "Majoration de salaire pour les heures travaillées durant la plage horaire définie comme 'nuit'.",
+      "en": "Salary increase for hours worked during the defined 'night' time period."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "المادة 30 من قانون العمل (القانون 90-11)، اتفاقية جماعية",
+      "fr": "Article 30 du Code du Travail (Loi 90-11), convention collective",
+      "en": "Article 30 of the Labor Code (Law 90-11), collective agreement"
+    },
+    "keywords": {
+      "ar": ["ليلي", "ساعات", "زيادة"],
+      "fr": ["nocturne", "horaires", "majoration"],
+      "en": ["nocturnal", "hours", "increase"]
+    }
+  },
+  {
+    "name": {
+      "ar": "مكافأة المشقة / المخاطرة / الخطر",
+      "fr": "Prime de nuisance / de risque / de danger",
+      "en": "Hardship / Risk / Danger bonus"
+    },
+    "abbreviations": ["PND", "danger"],
+    "definition": {
+      "ar": "تعويض عن ظروف عمل صعبة أو غير صحية أو خطيرة بشكل خاص متأصلة في الوظيفة.",
+      "fr": "Compensation pour des conditions de travail particulièrement pénibles, insalubres ou dangereuses inhérentes au poste.",
+      "en": "Compensation for particularly difficult, unhealthy, or dangerous working conditions inherent to the position."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة؛ المبدأ العام المادة 66 من الاتفاقية / القانون 83-14",
+      "fr": "Convention collective, accord d'entreprise ; Principe général CIDTA Art. 66 / Loi 83-14",
+      "en": "Collective agreement, company agreement; General principle CIDTA Art. 66 / Law 83-14"
+    },
+    "keywords": {
+      "ar": ["خطر", "مشقة", "سلامة"],
+      "fr": ["risque", "pénibilité", "sécurité"],
+      "en": ["risk", "hardship", "safety"]
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل المنطقة الجغرافية / ظروف المعيشة (IZCV)",
+      "fr": "Indemnité de zone géographique / de conditions de vie (IZCV)",
+      "en": "Geographical area / Living conditions allowance (IZCV)"
+    },
+    "abbreviations": ["IZCV", "zone sud"],
+    "definition": {
+      "ar": "بدل يدفع للعمال المعينين في مناطق جغرافية محددة (الجنوب، الهضاب) لتعويض ظروف المعيشة الصعبة.",
+      "fr": "Indemnité versée aux travailleurs affectés dans certaines régions géographiques spécifiques (Sud, Hauts Plateaux) pour compenser les conditions de vie difficiles.",
+      "en": "Allowance paid to workers assigned to specific geographical regions (South, Highlands) to compensate for difficult living conditions."
+    },
+    "cotisable": "نعم",
+    "imposable": "معفى",
+    "reason": {
+      "ar": "مراسيم تنفيذية محددة (مثل المرسوم 82-184، المرسوم 95-39)",
+      "fr": "Décrets exécutifs spécifiques (ex: Décret 82-184, Décret 95-39)",
+      "en": "Specific executive decrees (e.g., Decree 82-184, Decree 95-39)"
+    },
+    "keywords": {
+      "ar": ["إقليمي", "انتقال", "تعويض"],
+      "fr": ["régional", "déplacement", "compensation"],
+      "en": ["regional", "relocation", "compensation"]
+    },
+    "exoneration_reason": {
+      "ar": "السبب: بدل المنطقة الجغرافية (المرسوم 82-184)",
+      "fr": "Raison : Indemnité de zone géographique (Décret 82-184)",
+      "en": "Reason: Geographical area allowance (Decree 82-184)"
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل الاستعداد",
+      "fr": "Indemnité d'astreinte",
+      "en": "On-call allowance"
+    },
+    "abbreviations": ["IA", "dispo"],
+    "definition": {
+      "ar": "تعويض عن الفترة التي يجب فيها على الموظف أن يبقى متاحًا للتدخل بناءً على طلب صاحب العمل خارج ساعات العمل العادية.",
+      "fr": "Compensation pour la période pendant laquelle le salarié doit rester disponible pour intervenir à la demande de l'employeur en dehors de ses heures normales.",
+      "en": "Compensation for the period during which the employee must remain available to intervene at the employer's request outside normal hours."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة",
+      "fr": "Convention collective, accord d'entreprise",
+      "en": "Collective agreement, company agreement"
+    },
+    "keywords": {
+      "ar": ["توفر", "طوارئ", "استعداد"],
+      "fr": ["disponibilité", "urgence", "on-call"],
+      "en": ["availability", "emergency", "on-call"]
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل المسؤولية",
+      "fr": "Indemnité de responsabilité",
+      "en": "Responsibility allowance"
+    },
+    "abbreviations": ["IR", "resp"],
+    "definition": {
+      "ar": "مكافأة تدفع لتعويض المسؤوليات الخاصة المرتبطة بوظيفة (إشراف، إدارة).",
+      "fr": "Prime versée pour compenser les responsabilités particulières liées à un poste (encadrement, gestion).",
+      "en": "Bonus paid to compensate for particular responsibilities related to a position (supervision, management)."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة",
+      "fr": "Convention collective, accord d'entreprise",
+      "en": "Collective agreement, company agreement"
+    },
+    "keywords": {
+      "ar": ["إدارة", "إشراف", "قيادة"],
+      "fr": ["manager", "gestion", "encadrement"],
+      "en": ["management", "supervision", "leadership"]
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل التعامل مع النقد",
+      "fr": "Indemnité de caisse",
+      "en": "Cash handling allowance"
+    },
+    "abbreviations": ["IC", "caisse"],
+    "definition": {
+      "ar": "مكافأة تمنح للموظفين الذين يتعاملون مع الأموال لتغطية مخاطر أخطاء النقدية.",
+      "fr": "Prime allouée aux salariés manipulant des fonds pour couvrir les risques d'erreurs de caisse.",
+      "en": "Bonus allocated to employees handling funds to cover the risks of cash errors."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة",
+      "fr": "Convention collective, accord d'entreprise",
+      "en": "Collective agreement, company agreement"
+    },
+    "keywords": {
+      "ar": ["مال", "محاسبة", "خطر"],
+      "fr": ["argent", "comptabilité", "risque"],
+      "en": ["money", "accounting", "risk"]
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل النقل",
+      "fr": "Indemnité de transport",
+      "en": "Transport allowance"
+    },
+    "abbreviations": ["IT", "transp"],
+    "definition": {
+      "ar": "مساهمة صاحب العمل في مصاريف تنقل الموظف بين المنزل ومكان العمل.",
+      "fr": "Participation de l'employeur aux frais de déplacement du salarié entre son domicile et son lieu de travail.",
+      "en": "Employer's contribution to the employee's travel expenses between home and workplace."
+    },
+    "cotisable": "نعم",
+    "imposable": "معفى حتى حد معين",
+    "reason": {
+      "ar": "المادة 68 من الاتفاقية (للإعفاء الضريبي الجزئي)، القانون 83-14 (للمساهمات الاجتماعية)",
+      "fr": "CIDTA Art. 68 (pour l'exonération fiscale partielle), Loi 83-14 (pour la cotisabilité)",
+      "en": "CIDTA Art. 68 (for partial tax exemption), Law 83-14 (for social contributions)"
+    },
+    "keywords": {
+      "ar": ["تنقل", "حافلة", "مترو"],
+      "fr": ["trajet", "bus", "métro"],
+      "en": ["commute", "bus", "metro"]
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل الوجبات / الطعام",
+      "fr": "Indemnité de panier / de repas",
+      "en": "Meal allowance / Food allowance"
+    },
+    "abbreviations": ["IPR", "repas"],
+    "definition": {
+      "ar": "تعويض عن مصاريف الوجبات عندما لا يستطيع الموظف تناول الطعام في المنزل أو في الكافتيريا.",
+      "fr": "Compensation pour les frais de repas lorsque le salarié ne peut prendre son repas chez lui ou à la cantine.",
+      "en": "Compensation for meal expenses when the employee cannot eat at home or in the canteen."
+    },
+    "cotisable": "نعم",
+    "imposable": "معفى حتى حد معين",
+    "reason": {
+      "ar": "المادة 68 من الاتفاقية (للإعفاء الضريبي الجزئي)، القانون 83-14 (للمساهمات الاجتماعية)",
+      "fr": "CIDTA Art. 68 (pour l'exonération fiscale partielle), Loi 83-14 (pour la cotisabilité)",
+      "en": "CIDTA Art. 68 (for partial tax exemption), Law 83-14 (for social contributions)"
+    },
+    "keywords": {
+      "ar": ["طعام", "مطعم", "كافتيريا"],
+      "fr": ["nourriture", "restaurant", "cantine"],
+      "en": ["food", "restaurant", "canteen"]
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل السيارة / الكيلومتر",
+      "fr": "Indemnité de véhicule / kilométrique",
+      "en": "Vehicle / Mileage allowance"
+    },
+    "abbreviations": ["IVK", "km"],
+    "definition": {
+      "ar": "بدل يدفع للموظف الذي يستخدم سيارته الشخصية للسفر المهني.",
+      "fr": "Indemnité versée au salarié utilisant son véhicule personnel pour des déplacements professionnels.",
+      "en": "Allowance paid to the employee using their personal vehicle for professional travel."
+    },
+    "cotisable": "نعم",
+    "imposable": "معفى حتى حد معين",
+    "reason": {
+      "ar": "مبدأ استرداد المصروفات المهنية (المادة 68 من الاتفاقية، القانون 83-14)",
+      "fr": "Principe du remboursement de frais professionnels (CIDTA Art. 68, Loi 83-14)",
+      "en": "Principle of professional expense reimbursement (CIDTA Art. 68, Law 83-14)"
+    },
+    "keywords": {
+      "ar": ["سيارة", "سفر", "مهمة"],
+      "fr": ["voiture", "déplacement", "mission"],
+      "en": ["car", "travel", "mission"]
+    }
+  },
+  {
+    "name": {
+      "ar": "استرداد المصروفات المهنية",
+      "fr": "Remboursements de frais professionnels",
+      "en": "Professional expense reimbursements"
+    },
+    "abbreviations": ["RFP", "frais"],
+    "definition": {
+      "ar": "استرداد بعد تقديم إيصالات للمصروفات المتكبدة للاحتياجات المهنية.",
+      "fr": "Remboursement sur présentation de justificatifs des dépenses engagées pour les besoins professionnels.",
+      "en": "Reimbursement upon presentation of receipts for expenses incurred for professional needs."
+    },
+    "cotisable": "لا",
+    "imposable": "لا",
+    "reason": {
+      "ar": "المبدأ العام لاستبعاد استرداد المصروفات (المادة 68 من الاتفاقية، القانون 83-14)",
+      "fr": "Principe général d'exclusion des remboursements de frais (CIDTA Art. 68, Loi 83-14)",
+      "en": "General principle of exclusion of expense reimbursements (CIDTA Art. 68, Law 83-14)"
+    },
+    "keywords": {
+      "ar": ["مهمة", "سفر", "إيصال"],
+      "fr": ["mission", "déplacement", "justificatif"],
+      "en": ["mission", "travel", "receipt"]
+    },
+    "exoneration_reason": {
+      "ar": "السبب: بدل المصروفات التمثيلية (المادة 2-ب من المرسوم 96-208) - مستبعدة لأنها تغطي مصروفات مبررة، وليست دخلًا.",
+      "fr": "Raison : Indemnités représentatives de frais (Art. 2-b du Décret 96-208) - Exclues car couvrent des dépenses justifiées, non un revenu.",
+      "en": "Reason: Representative expense allowances (Art. 2-b of Decree 96-208) - Excluded as they cover justified expenses, not income."
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل تعويض الإجازة المدفوعة",
+      "fr": "Indemnité compensatrice de congés payés",
+      "en": "Paid leave compensation allowance"
+    },
+    "abbreviations": ["ICCP", "congés"],
+    "definition": {
+      "ar": "دفع أيام الإجازة السنوية المكتسبة ولكن غير المستخدمة في وقت إنهاء العقد.",
+      "fr": "Paiement des jours de congés annuels acquis mais non pris au moment de la rupture du contrat.",
+      "en": "Payment of annual leave days earned but not taken at the time of contract termination."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "المادة 52 من قانون العمل (القانون 90-11)",
+      "fr": "Article 52 du Code du Travail (Loi 90-11)",
+      "en": "Article 52 of the Labor Code (Law 90-11)"
+    },
+    "keywords": {
+      "ar": ["رصيد", "إنهاء", "مكتسب"],
+      "fr": ["solde", "rupture", "acquis"],
+      "en": ["balance", "termination", "earned"]
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل تعويض فترة الإخطار",
+      "fr": "Indemnité compensatrice de préavis",
+      "en": "Notice period compensation allowance"
+    },
+    "abbreviations": ["ICP", "préavis"],
+    "definition": {
+      "ar": "مبلغ يدفع عندما يعفي صاحب العمل الموظف من قضاء فترة الإخطار.",
+      "fr": "Somme versée lorsque l'employeur dispense le salarié d'effectuer sa période de préavis.",
+      "en": "Amount paid when the employer exempts the employee from serving their notice period."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "المادة 73-4 من قانون العمل (القانون 90-11)",
+      "fr": "Article 73-4 du Code du Travail (Loi 90-11)",
+      "en": "Article 73-4 of the Labor Code (Law 90-11)"
+    },
+    "keywords": {
+      "ar": ["إنهاء", "استبدال", "إعفاء"],
+      "fr": ["rupture", "remplacement", "dispense"],
+      "en": ["termination", "replacement", "exemption"]
+    }
+  },
+  {
+    "name": {
+      "ar": "تعويض الفصل",
+      "fr": "Indemnité de licenciement",
+      "en": "Severance pay"
+    },
+    "abbreviations": ["IDL", "licenciement"],
+    "definition": {
+      "ar": "تعويض يدفعه صاحب العمل في حالة الفصل لأسباب غير تأديبية.",
+      "fr": "Compensation versée par l'employeur en cas de licenciement pour motif non disciplinaire.",
+      "en": "Compensation paid by the employer in case of dismissal for non-disciplinary reasons."
+    },
+    "cotisable": "لا",
+    "imposable": "معفى",
+    "reason": {
+      "ar": "المادة 73-3 من قانون العمل (القانون 90-11)؛ المادة 68 من الاتفاقية؛ القانون 83-14",
+      "fr": "Article 73-3 du Code du Travail (Loi 90-11) ; CIDTA Art. 68 ; Loi 83-14",
+      "en": "Article 73-3 of the Labor Code (Law 90-11); CIDTA Art. 68; Law 83-14"
+    },
+    "keywords": {
+      "ar": ["إنهاء", "تعويض", "حساب"],
+      "fr": ["rupture", "compensation", "calcul"],
+      "en": ["termination", "compensation", "calculation"]
+    },
+    "exoneration_reason": {
+      "ar": "السبب: مكافآت/بدلات استثنائية (المادة 2-ج من المرسوم 96-208) - تعويض عن ضرر (إنهاء العقد).",
+      "fr": "Raison : Primes/indemnités à caractère exceptionnel (Art. 2-c du Décret 96-208) - Compense un préjudice (rupture du contrat).",
+      "en": "Reason: Exceptional bonuses/allowances (Art. 2-c of Decree 96-208) - Compensates for harm (contract termination)."
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل التقاعد",
+      "fr": "Indemnité de départ à la retraite",
+      "en": "Retirement allowance"
+    },
+    "abbreviations": ["IDR", "retraite"],
+    "definition": {
+      "ar": "مكافأة تدفع للموظف في وقت تقاعده.",
+      "fr": "Prime versée au salarié au moment de son départ à la retraite.",
+      "en": "Bonus paid to the employee at the time of their retirement."
+    },
+    "cotisable": "لا",
+    "imposable": "معفى",
+    "reason": {
+      "ar": "قانون التقاعد (القانون 83-12 والنصوص اللاحقة)، الاتفاقيات الجماعية، قانون المالية",
+      "fr": "Loi sur la retraite (Loi 83-12 et textes subséquents), conventions collectives, Loi de Finances",
+      "en": "Retirement law (Law 83-12 and subsequent texts), collective agreements, Finance Law"
+    },
+    "keywords": {
+      "ar": ["معاش", "نهاية المهنة", "كبير"],
+      "fr": ["pension", "fin carrière", "senior"],
+      "en": ["pension", "end of career", "senior"]
+    },
+    "exoneration_reason": {
+      "ar": "السبب: مكافآت/بدلات استثنائية (المادة 2-ج من المرسوم 96-208) - مكافأة لمرة واحدة مرتبطة بنهاية المهنة.",
+      "fr": "Raison : Primes/indemnités à caractère exceptionnel (Art. 2-c du Décret 96-208) - Prime ponctuelle liée à la fin de carrière.",
+      "en": "Reason: Exceptional bonuses/allowances (Art. 2-c of Decree 96-208) - One-time bonus linked to end of career."
+    }
+  },
+  {
+    "name": {
+      "ar": "مزايا عينية (سكن، سيارة، طعام)",
+      "fr": "Avantages en Nature (Logement, Véhicule, Nourriture)",
+      "en": "Benefits in Kind (Housing, Vehicle, Food)"
+    },
+    "abbreviations": ["AVN", "avantage"],
+    "definition": {
+      "ar": "توفير سلع أو خدمات من قبل صاحب العمل، يتم تقييمها نقديًا.",
+      "fr": "Fourniture de biens ou services par l'employeur, évalués monétairement.",
+      "en": "Provision of goods or services by the employer, monetarily evaluated."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "المادة 67 من الاتفاقية، النصوص التنظيمية حول تقييم المزايا العينية",
+      "fr": "CIDTA Art. 67, textes réglementaires sur l'évaluation des avantages en nature",
+      "en": "CIDTA Art. 67, regulatory texts on the evaluation of benefits in kind"
+    },
+    "keywords": {
+      "ar": ["سكن", "سيارة", "وجبات"],
+      "fr": ["logement", "voiture", "repas"],
+      "en": ["housing", "car", "meals"]
+    }
+  },
+  {
+    "name": {
+      "ar": "مكافأة الحضور / الانتظام",
+      "fr": "Prime de présence / d'assiduité",
+      "en": "Attendance / Punctuality bonus"
+    },
+    "abbreviations": ["PPA", "présence"],
+    "definition": {
+      "ar": "مكافأة تهدف إلى مكافأة الحضور المنتظم وغياب التأخيرات أو الغيابات غير المبررة.",
+      "fr": "Prime visant à récompenser la présence régulière et l'absence de retards ou d'absences injustifiées.",
+      "en": "Bonus aimed at rewarding regular attendance and absence of unjustified delays or absences."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية جماعية، اتفاقية مؤسسة",
+      "fr": "Convention collective, accord d'entreprise",
+      "en": "Collective agreement, company agreement"
+    },
+    "keywords": {
+      "ar": ["انتظام", "غياب", "انتظام"],
+      "fr": ["ponctualité", "absentéisme", "régularité"],
+      "en": ["punctuality", "absenteeism", "regularity"]
+    }
+  },
+  {
+    "name": {
+      "ar": "مكافأة التمثيل",
+      "fr": "Prime de représentation",
+      "en": "Representation bonus"
+    },
+    "abbreviations": ["PR", "représentation"],
+    "definition": {
+      "ar": "بدل يدفع لبعض المدراء أو مندوبي المبيعات لتغطية المصروفات المتعلقة بتمثيل الشركة.",
+      "fr": "Allocation versée à certains cadres ou commerciaux pour couvrir des frais liés à la représentation de l'entreprise.",
+      "en": "Allowance paid to certain executives or salespeople to cover expenses related to representing the company."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "المبدأ العام المادة 66 من الاتفاقية / القانون 83-14",
+      "fr": "Principe général CIDTA Art. 66 / Loi 83-14",
+      "en": "General principle CIDTA Art. 66 / Law 83-14"
+    },
+    "keywords": {
+      "ar": ["عميل", "علاقة", "حدث"],
+      "fr": ["client", "relation", "événement"],
+      "en": ["client", "relationship", "event"]
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل الفارق في الدخل",
+      "fr": "Indemnité différentielle sur le revenu",
+      "en": "Income differential allowance"
+    },
+    "abbreviations": ["IDR", "Diff. Salaire"],
+    "definition": {
+      "ar": "تعديل في الراتب لتعويض انخفاض الدخل بسبب إعادة التصنيف أو تغيير الوظيفة.",
+      "fr": "Ajustement salarial pour compenser une baisse de revenu due à un reclassement ou changement de poste.",
+      "en": "Salary adjustment to compensate for income decrease due to reclassification or position change."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقيات جماعية (مبدأ حماية الأجر مستوحى من المادة 10 من قانون العمل)",
+      "fr": "Conventions collectives (principe de protection salariale inspiré de l'Art. 10 Code du Travail)",
+      "en": "Collective agreements (principle of salary protection inspired by Art. 10 Labor Code)"
+    },
+    "keywords": {
+      "ar": ["تعديل", "حماية", "إعادة تصنيف"],
+      "fr": ["ajustement", "protection", "reclassement"],
+      "en": ["adjustment", "protection", "reclassification"]
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل الخدمة الدائمة",
+      "fr": "Indemnité de service permanent",
+      "en": "Permanent service allowance"
+    },
+    "abbreviations": ["ISP", "Perm."],
+    "definition": {
+      "ar": "تعويض عن التوفر الدائم خارج ساعات العمل العادية (المدراء التنفيذيين، مسؤولي الطوارئ).",
+      "fr": "Compensation pour disponibilité permanente hors horaires normaux (cadres dirigeants, responsables urgences).",
+      "en": "Compensation for permanent availability outside normal hours (executives, emergency managers)."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية جماعية (مستمدة من المادة 30 من قانون العمل)",
+      "fr": "Convention collective (dérivée de l'Art. 30 Code du Travail)",
+      "en": "Collective agreement (derived from Art. 30 Labor Code)"
+    },
+    "keywords": {
+      "ar": ["ديمومة", "طوارئ", "تنفيذي"],
+      "fr": ["permanence", "urgence", "cadre"],
+      "en": ["permanence", "emergency", "executive"]
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل التقنية",
+      "fr": "Indemnité de technicité",
+      "en": "Technicality allowance"
+    },
+    "abbreviations": ["ITEC", "Tech"],
+    "definition": {
+      "ar": "مكافأة للمهارات التقنية النادرة أو الخبرة المحددة.",
+      "fr": "Prime pour compétences techniques rares ou expertise spécifique.",
+      "en": "Bonus for rare technical skills or specific expertise."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية مؤسسة (المادة 66 من الاتفاقية)",
+      "fr": "Accord d'entreprise (CIDTA Art. 66)",
+      "en": "Company agreement (CIDTA Art. 66)"
+    },
+    "keywords": {
+      "ar": ["خبرة", "مهارة", "تخصص"],
+      "fr": ["expertise", "compétence", "spécialisation"],
+      "en": ["expertise", "skill", "specialization"]
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل القيد",
+      "fr": "Indemnité de sujétion",
+      "en": "Constraint allowance"
+    },
+    "abbreviations": ["IS", "Sujét."],
+    "definition": {
+      "ar": "تعويض عن قيود استثنائية غير مشمولة ببدل المشقة.",
+      "fr": "Compensation pour contraintes exceptionnelles non couvertes par les indemnités de pénibilité.",
+      "en": "Compensation for exceptional constraints not covered by hardship allowances."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية جماعية (المادة 30 من قانون العمل)",
+      "fr": "Convention collective (Art. 30 Code du Travail)",
+      "en": "Collective agreement (Art. 30 Labor Code)"
+    },
+    "keywords": {
+      "ar": ["قيد", "استثنائي", "صرامة"],
+      "fr": ["contrainte", "exceptionnel", "rigueur"],
+      "en": ["constraint", "exceptional", "rigor"]
+    }
+  },
+  {
+    "name": {
+      "ar": "مكافأة الأداء المالي",
+      "fr": "Prime de bilan",
+      "en": "Financial performance bonus"
+    },
+    "abbreviations": ["PB", "Bilan"],
+    "definition": {
+      "ar": "مكافأة سنوية مرتبطة بالأداء المالي للشركة.",
+      "fr": "Prime annuelle liée aux performances financières de l'entreprise.",
+      "en": "Annual bonus linked to the company's financial performance."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية مؤسسة (المادة 66 من الاتفاقية)",
+      "fr": "Accord d'entreprise (CIDTA Art. 66)",
+      "en": "Company agreement (CIDTA Art. 66)"
+    },
+    "keywords": {
+      "ar": ["أداء", "نتائج", "سنوي"],
+      "fr": ["performance", "résultats", "annuel"],
+      "en": ["performance", "results", "annual"]
+    }
+  },
+  {
+    "name": {
+      "ar": "مكافأة الجرد",
+      "fr": "Prime d'inventaire",
+      "en": "Inventory bonus"
+    },
+    "abbreviations": ["PINV", "Invent."],
+    "definition": {
+      "ar": "أجر للمشاركة في الجرد المادي.",
+      "fr": "Rémunération pour participation aux inventaires physiques.",
+      "en": "Remuneration for participation in physical inventories."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "عرف أو اتفاقية جماعية",
+      "fr": "Usage ou convention collective",
+      "en": "Custom or collective agreement"
+    },
+    "keywords": {
+      "ar": ["مخزون", "عد", "استثنائي"],
+      "fr": ["stock", "comptage", "exceptionnel"],
+      "en": ["stock", "counting", "exceptional"]
+    }
+  },
+  {
+    "name": {
+      "ar": "مكافأة المغادرة المتفاوض عليها",
+      "fr": "Prime de départ négocié",
+      "en": "Negotiated departure bonus"
+    },
+    "abbreviations": ["PDN", "Négoc."],
+    "definition": {
+      "ar": "مكافأة استثنائية تدفع أثناء مغادرة متفاوض عليها.",
+      "fr": "Prime exceptionnelle versée lors d'un départ négocié.",
+      "en": "Exceptional bonus paid during a negotiated departure."
+    },
+    "cotisable": "لا",
+    "imposable": "معفى",
+    "reason": {
+      "ar": "اتفاق بين الأطراف (المادة 73-3 من قانون العمل)",
+      "fr": "Accord entre parties (Art. 73-3 Code du Travail)",
+      "en": "Agreement between parties (Art. 73-3 Labor Code)"
+    },
+    "keywords": {
+      "ar": ["إنهاء", "تفاوض", "استثنائي"],
+      "fr": ["rupture", "négociation", "exceptionnel"],
+      "en": ["termination", "negotiation", "exceptional"]
+    },
+    "exoneration_reason": {
+      "ar": "السبب: تعويض الفصل (المادة 73-3 من قانون العمل)",
+      "fr": "Raison : Indemnité de licenciement (Art. 73-3 Code du Travail)",
+      "en": "Reason: Severance pay (Art. 73-3 Labor Code)"
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل العمل غير الصحي والقذر",
+      "fr": "Indemnité d'insalubrité et salissure",
+      "en": "Unhealthy and dirty work allowance"
+    },
+    "abbreviations": ["IIS", "Insal."],
+    "definition": {
+      "ar": "تعويض عن العمل الذي يعرض لظروف غير صحية.",
+      "fr": "Compensation pour travaux exposant à des conditions insalubres.",
+      "en": "Compensation for work exposing to unsanitary conditions."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية جماعية (المادة 30 من قانون العمل)",
+      "fr": "Convention collective (Art. 30 Code du Travail)",
+      "en": "Collective agreement (Art. 30 Labor Code)"
+    },
+    "keywords": {
+      "ar": ["قذارة", "خطر", "نظافة"],
+      "fr": ["saleté", "risque", "hygiène"],
+      "en": ["dirt", "risk", "hygiene"]
+    }
+  },
+  {
+    "name": {
+      "ar": "IFAAV (بدل المزايا العينية للسيارة)",
+      "fr": "IFAAV (Indemnité forfaitaire pour avantage en véhicule)",
+      "en": "IFAAV (Flat-rate vehicle benefit allowance)"
+    },
+    "abbreviations": ["IFAAV", "Véhic."],
+    "definition": {
+      "ar": "مبلغ مقطوع شهريًا لاستخدام سيارة شخصية لأغراض مهنية.",
+      "fr": "Forfait mensuel pour utilisation de véhicule personnel à des fins professionnelles.",
+      "en": "Monthly flat rate for using a personal vehicle for professional purposes."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية مؤسسة (المادة 67 من الاتفاقية)",
+      "fr": "Accord d'entreprise (CIDTA Art. 67)",
+      "en": "Company agreement (CIDTA Art. 67)"
+    },
+    "keywords": {
+      "ar": ["سيارة", "مهمة", "مقطوع"],
+      "fr": ["voiture", "mission", "forfait"],
+      "en": ["car", "mission", "flat-rate"]
+    }
+  },
+  {
+    "name": {
+      "ar": "مكافأة الولاء",
+      "fr": "Prime de fidélité",
+      "en": "Loyalty bonus"
+    },
+    "abbreviations": ["PF", "Fidél."],
+    "definition": {
+      "ar": "مكافأة تشجع استقرار الموظفين بعد مدة محددة.",
+      "fr": "Prime encourageant la stabilité des employés après une durée déterminée.",
+      "en": "Bonus encouraging employee stability after a determined duration."
+    },
+    "cotisable": "نعم",
+    "imposable": "نعم",
+    "reason": {
+      "ar": "اتفاقية جماعية أو سياسة داخلية",
+      "fr": "Convention collective ou politique interne",
+      "en": "Collective agreement or internal policy"
+    },
+    "keywords": {
+      "ar": ["أقدمية", "ولاء", "احتفاظ"],
+      "fr": ["ancienneté", "loyauté", "retention"],
+      "en": ["seniority", "loyalty", "retention"]
+    }
+  },
+  {
+    "name": {
+      "ar": "بدل المنطقة A2/B2/C1",
+      "fr": "Indemnité de Zone A2/B2/C1",
+      "en": "Zone A2/B2/C1 Allowance"
+    },
+    "abbreviations": ["IZ-A2", "IZ-B2", "IZ-C1"],
+    "definition": {
+      "ar": "متغيرات قطاعية لـ IZCV للمناطق الصحراوية/المتطرفة.",
+      "fr": "Variantes sectorielles de l'IZCV pour zones désertiques/extrêmes.",
+      "en": "Sectoral variants of IZCV for desert/extreme zones."
+    },
+    "cotisable": "نعم",
+    "imposable": "معفى",
+    "reason": {
+      "ar": "مراسيم قطاعية (مثل المرسوم 95-39 للهيدروكربونات)",
+      "fr": "Décrets sectoriels (ex: Décret 95-39 pour hydrocarbures)",
+      "en": "Sectoral decrees (e.g., Decree 95-39 for hydrocarbons)"
+    },
+    "keywords": {
+      "ar": ["منطقة", "جنوب", "صحراء"],
+      "fr": ["région", "sud", "désert"],
+      "en": ["region", "south", "desert"]
+    },
+    "exoneration_reason": {
+      "ar": "السبب: بدل المنطقة الجغرافية (المرسوم 82-184)",
+      "fr": "Raison : Indemnité de zone géographique (Décret 82-184)",
+      "en": "Reason: Geographical area allowance (Decree 82-184)"
+    }
+  },
+  {
+    "name": {
+      "ar": "تسوية كاملة",
+      "fr": "Solde tout compte",
+      "en": "Final settlement"
+    },
+    "abbreviations": ["STC", "Solde"],
+    "definition": {
+      "ar": "وثيقة ملخصة للمبالغ المستحقة في نهاية العقد.",
+      "fr": "Document récapitulatif des sommes dues en fin de contrat.",
+      "en": "Summary document of amounts due at contract termination."
+    },
+    "cotisable": "متغير",
+    "imposable": "متغير",
+    "reason": {
+      "ar": "المادة 73 من قانون العمل",
+      "fr": "Article 73 Code du Travail",
+      "en": "Article 73 Labor Code"
+    },
+    "keywords": {
+      "ar": ["إنهاء", "تصفية", "نهائي"],
+      "fr": ["rupture", "liquidation", "final"],
+      "en": ["termination", "liquidation", "final"]
+    }
+  },
+  {
+    "name": {
+      "ar": "PCS (التأمين الاجتماعي التكميلي)",
+      "fr": "PCS (Prévoyance sociale complémentaire)",
+      "en": "PCS (Supplementary social security)"
+    },
+    "abbreviations": ["PCS", "Prévoy."],
+    "definition": {
+      "ar": "مساهمة اختيارية للتغطية الاجتماعية التكميلية.",
+      "fr": "Contribution facultative pour couverture sociale complémentaire.",
+      "en": "Optional contribution for supplementary social coverage."
+    },
+    "cotisable": "لا",
+    "imposable": "مشروط",
+    "reason": {
+      "ar": "اتفاقيات المؤسسة",
+      "fr": "Accords d'entreprise",
+      "en": "Company agreements"
+    },
+    "keywords": {
+      "ar": ["تأمين", "معاش", "تكميلي"],
+      "fr": ["mutuelle", "retraite", "complémentaire"],
+      "en": ["mutual", "pension", "supplementary"]
+    }
+  }
+]

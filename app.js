@@ -1,41 +1,40 @@
-// DOM Elements
+let indemnities = [];
+let currentLanguage = 'fr';
+
 const searchInput = document.getElementById('searchInput');
 const searchBtn = document.getElementById('searchBtn');
 const resultDiv = document.getElementById('result');
 const pdfViewer = document.getElementById('pdfViewer');
 const togglePdfBtn = document.getElementById('togglePdfBtn');
+const quizBtn = document.getElementById('quizBtn');
+const quizModal = document.getElementById('quizModal');
+const closeModal = document.querySelector('.close-modal');
+const quizIframe = document.getElementById('quizIframe');
 
-// Global variable to store indemnities
-let indemnities = [];
+function getTranslatedField(obj, field) {
+  if (!obj) return '';
+  if (typeof obj[field] === 'object' && obj[field] !== null) {
+    return obj[field][currentLanguage] || obj[field]['fr'] || '';
+  }
+  return obj[field];
+}
 
-// Fetch indemnities from the JSON file
 async function fetchIndemnities() {
   try {
-    const response = await fetch('data.json');
-    if (!response.ok) {
-      throw new Error('Failed to load indemnities data');
-    }
+    const response = await fetch(`data/${currentLanguage}.json`);
+    if (!response.ok) throw new Error('Failed to load data');
     indemnities = await response.json();
     displayAllIndemnities();
   } catch (error) {
-    console.error(error);
-    resultDiv.innerHTML = `
-      <div class="no-results">
-        <p>Erreur lors du chargement des données des indemnités.</p>
-      </div>
-    `;
+    console.error('Error loading data:', error);
+    resultDiv.innerHTML = `<div class="no-results"><p>${translations[currentLanguage]['data-error']}</p></div>`;
   }
 }
 
-// Normalize text for searching (remove accents and make lowercase)
 function normalizeText(text) {
-  return text
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
+  return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-// Search function with improved matching
 function searchIndemnity() {
   const query = searchInput.value.trim();
   resultDiv.innerHTML = '';
@@ -50,11 +49,11 @@ function searchIndemnity() {
 
   const results = indemnities.filter(item => {
     const searchText = normalizeText([
-      item.name,
+      getTranslatedField(item, 'name'),
       ...(item.abbreviations || []),
-      ...(item.keywords || []),
-      item.definition,
-      item.reason
+      ...(getTranslatedField(item, 'keywords') || []),
+      getTranslatedField(item, 'definition'),
+      getTranslatedField(item, 'reason')
     ].join(' '));
 
     return queryWords.every(word => searchText.includes(word));
@@ -67,105 +66,77 @@ function searchIndemnity() {
   }
 }
 
-// Display all indemnities initially
-function displayAllIndemnities() {
-  if (indemnities && Array.isArray(indemnities)) {
-    displayResults(indemnities);
-  } else {
-    resultDiv.innerHTML = `
-      <div class="no-results">
-        <p>Les données des indemnités ne sont pas disponibles.</p>
-      </div>
-    `;
-  }
-}
-
-// Updated display results with exoneration reason display
 function displayResults(results) {
   resultDiv.innerHTML = results.map(item => `
     <div class="indemnity-card">
-      <h3>${item.name} ${item.abbreviations ? `(${item.abbreviations.join(', ')})` : ''}</h3>
-      <p class="definition">${item.definition}</p>
-      
+      <h3>${getTranslatedField(item, 'name')} ${item.abbreviations ? `(${item.abbreviations.join(', ')})` : ''}</h3>
+      <p class="definition">${getTranslatedField(item, 'definition')}</p>
       <div class="property-line">
-        <strong>Cotisable:</strong> 
+        <strong>${translations[currentLanguage]['cotisable']}:</strong> 
         <span class="cotisable-${item.cotisable.toLowerCase()}">${item.cotisable}</span>
       </div>
-      
       <div class="property-line">
-        <strong>Imposable:</strong> 
+        <strong>${translations[currentLanguage]['imposable']}:</strong> 
         <span class="imposable-${item.imposable.toLowerCase()}">${item.imposable}</span>
       </div>
-      
-      <div class="reference">${item.reason}</div>
-      
+      <div class="reference">${getTranslatedField(item, 'reason')}</div>
       ${item.exoneration_reason ? `
-        <div class="exoneration-reason">${item.exoneration_reason}</div>
+        <div class="exoneration-reason">${getTranslatedField(item, 'exoneration_reason')}</div>
       ` : ''}
-      
       <div class="keywords">
-        ${item.keywords.map(kw => `<span class="keyword-tag">${kw}</span>`).join('')}
+        ${(getTranslatedField(item, 'keywords') || []).map(kw => 
+          `<span class="keyword-tag">${kw}</span>`
+        ).join('')}
       </div>
     </div>
   `).join('');
 }
 
+function displayAllIndemnities() {
+  if (indemnities && Array.isArray(indemnities)) {
+    displayResults(indemnities);
+  } else {
+    resultDiv.innerHTML = `<div class="no-results"><p>${translations[currentLanguage]['no-data']}</p></div>`;
+  }
+}
+
 function showNoResults(query) {
   resultDiv.innerHTML = `
     <div class="no-results">
-      <p>Aucun résultat trouvé pour "${query}"</p>
-      <p>Essayez avec un terme différent ou plus général.</p>
+      <p>${translations[currentLanguage]['no-results']} "${query}"</p>
+      <p>${translations[currentLanguage]['try-again']}</p>
     </div>
   `;
-}
-
-function showPdfPage(pageNum) {
-  pdfViewer.src = `./assets/code-travail.pdf#page=${pageNum}`;
-  if (pdfViewer.style.display === 'none') {
-    pdfViewer.style.display = 'block';
-  }
 }
 
 function togglePdfViewer() {
   pdfViewer.style.display = pdfViewer.style.display === 'none' ? 'block' : 'none';
   togglePdfBtn.textContent = pdfViewer.style.display === 'none' ? 
-    'Afficher PDF' : 'Masquer PDF';
+    translations[currentLanguage]['show-pdf'] : translations[currentLanguage]['hide-pdf'];
 }
 
-// Quiz Modal functionality
-const quizBtn = document.createElement('button');
-quizBtn.className = 'quiz-btn';
-quizBtn.innerHTML = 'Quiz';
-quizBtn.title = 'Testez vos connaissances sur les indemnités';
-document.body.appendChild(quizBtn);
-
-const quizModal = document.getElementById('quizModal');
-const closeModal = document.querySelector('.close-modal');
-
-quizBtn.addEventListener('click', () => {
+function openQuizModal() {
   quizModal.classList.add('show');
   document.body.style.overflow = 'hidden';
-});
+  quizIframe.src = `quiz.html?lang=${currentLanguage}`;
+}
 
-closeModal.addEventListener('click', () => {
+function closeQuizModal() {
   quizModal.classList.remove('show');
   document.body.style.overflow = '';
-});
+}
 
-// Close modal when clicking outside
-quizModal.addEventListener('click', (e) => {
-  if (e.target === quizModal) {
-    quizModal.classList.remove('show');
-    document.body.style.overflow = '';
-  }
-});
-
-// Event listeners
 searchBtn.addEventListener('click', searchIndemnity);
 searchInput.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') searchIndemnity();
 });
 togglePdfBtn.addEventListener('click', togglePdfViewer);
+quizBtn.addEventListener('click', openQuizModal);
+closeModal.addEventListener('click', closeQuizModal);
+quizModal.addEventListener('click', (e) => {
+  if (e.target === quizModal) closeQuizModal();
+});
 
-// Initialize
-document.addEventListener('DOMContentLoaded', fetchIndemnities);
+document.addEventListener('DOMContentLoaded', () => {
+  fetchIndemnities();
+});
