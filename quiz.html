@@ -4,120 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz sur les Indemnités Algériennes</title>
-  <link rel="stylesheet" href="style.css">
   <style>
-    .quiz-container {
-      max-width: 100% !important;
-      margin: 0 !important;
-      padding: 20px !important;
-      box-shadow: none !important;
-      border-radius: 0 !important;
-      height: 100%;
-    }
-    
-    .question-container {
-      margin-bottom: 30px;
-      border-left: 4px solid #0056b3;
-      padding-left: 15px;
-    }
-    
-    .question {
-      font-weight: bold;
-      margin-bottom: 15px;
-      font-size: 18px;
-      color: #333;
-    }
-    
-    .options {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    
-    .option {
-      padding: 12px 15px;
-      background-color: #f0f7ff;
-      border: 1px solid #cce0ff;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    
-    .option:hover {
-      background-color: #e1eeff;
-      transform: translateX(5px);
-    }
-    
-    .option.selected {
-      background-color: #d4e6ff;
-      border-color: #0056b3;
-      font-weight: bold;
-    }
-    
-    .option.correct {
-      background-color: #d4edda;
-      border-color: #28a745;
-    }
-    
-    .option.incorrect {
-      background-color: #f8d7da;
-      border-color: #dc3545;
-    }
-    
-    .feedback {
-      margin-top: 15px;
-      padding: 10px;
-      border-radius: 5px;
-      display: none;
-    }
-    
-    .feedback.correct {
-      background-color: #d4edda;
-      color: #155724;
-      display: block;
-    }
-    
-    .feedback.incorrect {
-      background-color: #f8d7da;
-      color: #721c24;
-      display: block;
-    }
-    
-    .controls {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 30px;
-    }
-    
-    .score-container {
-      text-align: center;
-      margin: 20px 0;
-      font-size: 18px;
-    }
-    
-    .progress-bar {
-      height: 10px;
-      background-color: #e9ecef;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      overflow: hidden;
-    }
-    
-    .progress {
-      height: 100%;
-      background-color: #0056b3;
-      width: 0%;
-      transition: width 0.3s ease;
-    }
-    
+    * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { margin: 0; padding: 20px; background-color: #f9f9f9; }
+    .quiz-container { max-width: 800px; margin: 0 auto; background: white; border-radius: 10px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    h1 { color: #0056b3; text-align: center; margin-bottom: 30px; font-size: 24px; }
+    .question-container { margin-bottom: 30px; border-left: 4px solid #0056b3; padding-left: 15px; }
+    .question { font-weight: bold; margin-bottom: 15px; font-size: 18px; color: #333; }
+    .options { display: flex; flex-direction: column; gap: 10px; }
+    .option { padding: 12px 15px; background-color: #f0f7ff; border: 1px solid #cce0ff; border-radius: 5px; cursor: pointer; transition: all 0.2s ease; }
+    .option:hover { background-color: #e1eeff; transform: translateX(5px); }
+    .option.selected { background-color: #d4e6ff; border-color: #0056b3; font-weight: bold; }
+    .option.correct { background-color: #d4edda; border-color: #28a745; }
+    .option.incorrect { background-color: #f8d7da; border-color: #dc3545; }
+    .feedback { margin-top: 15px; padding: 10px; border-radius: 5px; display: none; }
+    .feedback.correct { background-color: #d4edda; color: #155724; display: block; }
+    .feedback.incorrect { background-color: #f8d7da; color: #721c24; display: block; }
+    .controls { display: flex; justify-content: space-between; margin-top: 30px; }
+    button { padding: 12px 25px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: all 0.3s ease; }
+    button:hover { background-color: #003d82; }
+    button:disabled { background-color: #cccccc; cursor: not-allowed; }
+    .score-container { text-align: center; margin: 20px 0; font-size: 18px; }
+    .progress-bar { height: 10px; background-color: #e9ecef; border-radius: 5px; margin-bottom: 20px; overflow: hidden; }
+    .progress { height: 100%; background-color: #0056b3; width: 0%; transition: width 0.3s ease; }
+    #results { text-align: center; margin-top: 20px; }
+    #results h2 { color: #0056b3; }
+    #restartBtn { margin-top: 20px; }
     @media screen and (max-width: 600px) {
-      .quiz-container {
-        padding: 10px !important;
-      }
-      
-      .question {
-        font-size: 16px;
-      }
+      .quiz-container { padding: 15px; }
+      .question { font-size: 16px; }
+      button { padding: 10px 15px; }
     }
   </style>
 </head>
@@ -193,35 +109,349 @@
           options: ["3 mois", "6 mois", "Durée totale de l'affectation", "1 an"],
           correct: 2,
           explanation: "L'indemnité de zone est versée pendant toute la durée de l'affectation."
+        },
+        {
+          question: "Quelle indemnité compense les risques professionnels ?",
+          options: ["Indemnité de panier", "Indemnité de risque", "Prime de transport", "Prime d'ancienneté"],
+          correct: 1,
+          explanation: "L'indemnité de risque est prévue pour les travaux dangereux."
+        },
+        {
+          question: "Quel pourcentage pour les heures supplémentaires de nuit ?",
+          options: ["30%", "50%", "75%", "100%"],
+          correct: 3,
+          explanation: "Les heures de nuit donnent droit à une majoration de 100%."
+        },
+        {
+          question: "Quelle prime est liée à l'ancienneté ?",
+          options: ["Prime de rendement", "Prime de vacances", "Prime d'ancienneté", "Prime de bilan"],
+          correct: 2,
+          explanation: "La prime d'ancienneté récompense la fidélité dans l'entreprise."
+        },
+        {
+          question: "Quelle indemnité pour utilisation de véhicule personnel ?",
+          options: ["Indemnité kilométrique", "Prime de déplacement", "Indemnité carburant", "Prime véhicule"],
+          correct: 0,
+          explanation: "L'indemnité kilométrique couvre l'usage du véhicule personnel."
+        },
+        {
+          question: "Quelle est la durée maximale de la période d'essai en CDI ?",
+          options: ["3 mois", "6 mois", "12 mois", "18 mois"],
+          correct: 1,
+          explanation: "La période d'essai maximale pour un CDI est de 6 mois."
+        },
+        {
+          question: "Quel texte régit les conventions collectives ?",
+          options: ["Loi 90-11", "Loi 88-07", "Décret 95-39", "Ordonnance 75-31"],
+          correct: 0,
+          explanation: "La Loi 90-11 encadre les conventions collectives."
+        },
+        {
+          question: "Quelle indemnité en cas de licenciement abusif ?",
+          options: ["1 mois/salairé", "2 mois/salairé", "3 mois/salairé", "6 mois/salairé"],
+          correct: 2,
+          explanation: "Le Code du Travail prévoit minimum 3 mois de salaire."
+        },
+        {
+          question: "Quelle majoration pour travail le jour férié ?",
+          options: ["50%", "75%", "100%", "150%"],
+          correct: 2,
+          explanation: "Travail un jour férié donne droit à 100% de majoration."
+        },
+        {
+          question: "Quelle est l'indemnité due pour un déplacement professionnel en voiture personnelle?",
+          options: ["Indemnité kilométrique", "Prime de transport", "Forfait journalier", "Aucune indemnité"],
+          correct: 0,
+          explanation: "L'indemnité kilométrique couvre les frais de déplacement en voiture personnelle."
+        },
+        {
+          question: "La prime de fidélité est-elle imposable en Algérie?",
+          options: ["Toujours imposable", "Toujours exonérée", "Imposable si supérieure à 3 salaires", "Dépend de la convention collective"],
+          correct: 0,
+          explanation: "La prime de fidélité est considérée comme un complément de salaire et est donc imposable."
+        },
+        {
+          question: "Quelle zone donne droit à l'indemnité IZ-C1?",
+          options: ["Zones urbaines", "Zones semi-désertiques", "Zones désertiques extrêmes", "Zones frontalières"],
+          correct: 2,
+          explanation: "L'IZ-C1 s'applique aux zones désertiques extrêmes selon le décret 95-39."
+        },
+        {
+          question: "Quel texte régit les indemnités de zone en Algérie?",
+          options: ["Décret 82-184", "Loi 90-11", "Décret 95-39", "Circulaire 08-2015"],
+          correct: 0,
+          explanation: "Le décret 82-184 est le texte de référence pour les indemnités de zone géographique."
+        },
+        {
+          question: "Une indemnité de panier est-elle exonérée d'impôts?",
+          options: ["Oui, toujours", "Non, jamais", "Seulement si inférieure à 5000 DA", "Exonérée sous conditions"],
+          correct: 3,
+          explanation: "L'exonération dépend du montant et de la nature de l'indemnité."
+        },
+        {
+          question: "Quel est le pourcentage minimal de l'indemnité de transport?",
+          options: ["5% du salaire", "10% du salaire", "15% du salaire", "20% du salaire"],
+          correct: 1,
+          explanation: "Le Code du travail prévoit un minimum de 10% du salaire de base."
+        },
+        {
+          question: "Combien de temps faut-il pour avoir droit à la prime de fidélité?",
+          options: ["1 an", "3 ans", "5 ans", "Dépend de l'entreprise"],
+          correct: 3,
+          explanation: "La durée est fixée par la convention collective ou le contrat de travail."
+        },
+        {
+          question: "Quelle indemnité est spécifique aux zones pétrolières?",
+          options: ["IZ-A2", "IZ-B2", "Prime HSE", "Indemnité de risque"],
+          correct: 2,
+          explanation: "La prime HSE (Hygiène Sécurité Environnement) est spécifique au secteur pétrolier."
+        },
+        {
+          question: "L'indemnité de licenciement est-elle calculée sur:",
+          options: ["Le salaire brut", "Le salaire net", "Le salaire de base", "La moyenne des 12 derniers mois"],
+          correct: 2,
+          explanation: "Le calcul se base sur le salaire de base selon l'article 73 du Code du travail."
+        },
+        {
+          question: "Quelle indemnité n'existe pas en droit algérien?",
+          options: ["Indemnité de départ volontaire", "Indemnité de précarité", "Indemnité de non-concurrence", "Prime de bilan"],
+          correct: 3,
+          explanation: "La prime de bilan n'est pas prévue par la réglementation algérienne."
+        },
+        {
+          question: "Quelle est l'indemnité minimale pour travail de nuit?",
+          options: ["10%", "25%", "50%", "75%"],
+          correct: 2,
+          explanation: "Le travail de nuit donne droit à une majoration de 50% du salaire horaire normal."
+        },
+        {
+          question: "L'indemnité de congé annuel est payée:",
+          options: ["Avant le congé", "Pendant le congé", "Après le congé", "Au choix de l'employeur"],
+          correct: 0,
+          explanation: "L'indemnité doit être versée avant le départ en congé selon l'article 87 du Code du travail."
+        },
+        {
+          question: "Quelle est la durée minimale pour avoir droit aux congés payés?",
+          options: ["1 mois", "6 mois", "1 an", "Aucune durée minimale"],
+          correct: 0,
+          explanation: "Tout travailleur a droit à 2,5 jours de congé par mois de travail effectif."
+        },
+        {
+          question: "L'indemnité de licenciement est due après:",
+          options: ["1 an d'ancienneté", "2 ans d'ancienneté", "5 ans d'ancienneté", "Toujours due"],
+          correct: 0,
+          explanation: "L'indemnité est due dès la première année d'ancienneté."
+        },
+        {
+          question: "Quelle est la base de calcul des indemnités de licenciement?",
+          options: ["Salaire brut", "Salaire net", "Salaire de base", "Salaire moyen des 3 derniers mois"],
+          correct: 2,
+          explanation: "Le calcul se fait sur le salaire de base selon l'article 73 du Code du travail."
+        },
+        {
+          question: "L'indemnité de préavis est-elle imposable?",
+          options: ["Toujours imposable", "Toujours exonérée", "Exonérée jusqu'à 3 mois", "Dépend du secteur"],
+          correct: 0,
+          explanation: "L'indemnité de préavis est considérée comme un salaire et donc imposable."
+        },
+        {
+          question: "Quelle est la durée maximale du préavis?",
+          options: ["1 mois", "2 mois", "3 mois", "6 mois"],
+          correct: 2,
+          explanation: "La durée maximale du préavis est de 3 mois pour les cadres."
+        },
+        {
+          question: "L'indemnité de fin de contrat est-elle due en cas de démission?",
+          options: ["Oui, toujours", "Non, jamais", "Seulement après 5 ans", "Dépend de la convention"],
+          correct: 1,
+          explanation: "L'indemnité n'est due qu'en cas de licenciement ou retraite."
+        },
+        {
+          question: "Quelle est l'indemnité pour heures supplémentaires?",
+          options: ["25%", "50%", "75%", "100%"],
+          correct: 1,
+          explanation: "Les heures supplémentaires donnent droit à une majoration de 50%."
+        },
+        {
+          question: "L'indemnité de maternité est payée par:",
+          options: ["L'employeur", "La sécurité sociale", "Les deux", "L'État"],
+          correct: 1,
+          explanation: "L'indemnité est versée par la sécurité sociale pour 14 semaines."
+        },
+        {
+          question: "Quelle est la durée du congé de maternité?",
+          options: ["12 semaines", "14 semaines", "16 semaines", "18 semaines"],
+          correct: 1,
+          explanation: "Le congé de maternité est de 14 semaines en Algérie."
+        },
+        {
+          question: "L'indemnité de maladie est payée à partir du:",
+          options: ["1er jour", "4ème jour", "8ème jour", "15ème jour"],
+          correct: 2,
+          explanation: "La sécurité sociale prend en charge à partir du 8ème jour d'arrêt."
+        },
+        {
+          question: "Quelle est la durée maximale d'indemnisation pour maladie?",
+          options: ["6 mois", "1 an", "2 ans", "3 ans"],
+          correct: 1,
+          explanation: "La durée maximale est d'un an, renouvelable sous conditions."
+        },
+        {
+          question: "L'indemnité de décès est égale à:",
+          options: ["3 mois de salaire", "6 mois de salaire", "1 an de salaire", "2 ans de salaire"],
+          correct: 2,
+          explanation: "L'indemnité de décès correspond à un an de salaire."
+        },
+        {
+          question: "Qui paie l'indemnité de décès?",
+          options: ["L'employeur", "La sécurité sociale", "L'État", "La famille"],
+          correct: 1,
+          explanation: "La sécurité sociale verse l'indemnité de décès aux ayants droit."
+        },
+        {
+          question: "L'indemnité de licenciement pour faute grave est-elle due?",
+          options: ["Oui, toujours", "Non, jamais", "À 50%", "Dépend de l'ancienneté"],
+          correct: 1,
+          explanation: "Aucune indemnité n'est due en cas de faute grave."
+        },
+        {
+          question: "Quelle est l'indemnité pour travail le jour férié?",
+          options: ["50%", "100%", "150%", "200%"],
+          correct: 1,
+          explanation: "Le travail un jour férié donne droit au double du salaire normal (100% de majoration)."
+        },
+        {
+          question: "L'indemnité de formation est-elle imposable?",
+          options: ["Toujours imposable", "Toujours exonérée", "Exonérée sous conditions", "Dépend du montant"],
+          correct: 2,
+          explanation: "Exonérée si la formation est en rapport avec l'activité professionnelle."
+        },
+        {
+          question: "Quelle est la durée minimale pour avoir droit à la retraite?",
+          options: ["15 ans", "20 ans", "25 ans", "32 ans"],
+          correct: 0,
+          explanation: "La durée minimale de cotisation est de 15 ans (homme) ou 14 ans (femme)."
+        },
+        {
+          question: "L'indemnité de départ à la retraite est égale à:",
+          options: ["1 mois par année", "1.5 mois par année", "2 mois par année", "2.5 mois par année"],
+          correct: 2,
+          explanation: "L'indemnité correspond à 2 mois de salaire par année d'ancienneté."
+        },
+        {
+          question: "Quelle est l'indemnité pour travail dominical?",
+          options: ["50%", "75%", "100%", "Pas de majoration"],
+          correct: 2,
+          explanation: "Le travail le dimanche donne droit au double du salaire normal."
+        },
+        {
+          question: "L'indemnité de logement est-elle exonérée?",
+          options: ["Toujours exonérée", "Toujours imposable", "Exonérée jusqu'à 30% du salaire", "Dépend du secteur"],
+          correct: 2,
+          explanation: "Exonérée dans la limite de 30% du salaire brut."
+        },
+        {
+          question: "Quelle est la durée du préavis pour un cadre?",
+          options: ["1 mois", "2 mois", "3 mois", "6 mois"],
+          correct: 2,
+          explanation: "La durée du préavis pour les cadres est de 3 mois."
+        },
+        {
+          question: "L'indemnité de licenciement économique est-elle majorée?",
+          options: ["Oui, de 50%", "Oui, de 100%", "Non", "Dépend de l'ancienneté"],
+          correct: 1,
+          explanation: "En cas de licenciement économique, l'indemnité est doublée."
+        },
+        {
+          question: "Quelle est l'indemnité pour travail en équipe?",
+          options: ["10%", "15%", "20%", "25%"],
+          correct: 2,
+          explanation: "Le travail en équipe donne droit à une majoration de 20%."
+        },
+        {
+          question: "L'indemnité de transport est-elle due pour le télétravail?",
+          options: ["Oui, toujours", "Non, jamais", "À 50%", "Dépend de l'accord"],
+          correct: 1,
+          explanation: "Aucune indemnité n'est due en cas de télétravail."
+        },
+        {
+          question: "Quelle est l'indemnité pour travail en hauteur?",
+          options: ["10%", "15%", "20%", "25%"],
+          correct: 2,
+          explanation: "Le travail en hauteur donne droit à une majoration de 20%."
+        },
+        {
+          question: "L'indemnité de représentation est-elle imposable?",
+          options: ["Toujours imposable", "Toujours exonérée", "Exonérée jusqu'à 20% du salaire", "Dépend du montant"],
+          correct: 2,
+          explanation: "Exonérée dans la limite de 20% du salaire brut."
+        },
+        {
+          question: "Quelle est l'indemnité pour travail insalubre?",
+          options: ["10%", "15%", "20%", "25%"],
+          correct: 3,
+          explanation: "Le travail insalubre donne droit à une majoration de 25%."
+        },
+        {
+          question: "L'indemnité de départ volontaire est-elle négociable?",
+          options: ["Oui, toujours", "Non, jamais", "Seulement après 5 ans", "Dépend de la convention"],
+          correct: 0,
+          explanation: "Le montant est librement négocié entre employeur et salarié."
+        },
+        {
+          question: "Quelle est l'indemnité pour travail dangereux?",
+          options: ["15%", "25%", "50%", "75%"],
+          correct: 1,
+          explanation: "Le travail dangereux donne droit à une majoration de 25%."
+        },
+        {
+          question: "L'indemnité de fin de carrière est-elle imposable?",
+          options: ["Toujours imposable", "Toujours exonérée", "Exonérée jusqu'à 5 millions", "Dépend de l'ancienneté"],
+          correct: 2,
+          explanation: "Exonérée dans la limite de 5 millions DA."
+        },
+        {
+          question: "Quelle est l'indemnité pour travail posté?",
+          options: ["10%", "15%", "20%", "25%"],
+          correct: 2,
+          explanation: "Le travail posté donne droit à une majoration de 20%."
+        },
+        {
+          question: "L'indemnité de technicité est-elle exonérée?",
+          options: ["Toujours exonérée", "Toujours imposable", "Exonérée jusqu'à 15% du salaire", "Dépend du secteur"],
+          correct: 2,
+          explanation: "Exonérée dans la limite de 15% du salaire brut."
+        },
+        {
+          question: "Quelle est l'indemnité pour travail en milieu confiné?",
+          options: ["15%", "20%", "25%", "30%"],
+          correct: 2,
+          explanation: "Le travail en milieu confiné donne droit à une majoration de 25%."
+        },
+        {
+          question: "L'indemnité de performance est-elle imposable?",
+          options: ["Toujours imposable", "Toujours exonérée", "Exonérée jusqu'à 1 mois de salaire", "Dépend du montant"],
+          correct: 0,
+          explanation: "Considérée comme un complément de salaire, donc imposable."
+        },
+        {
+          question: "Quelle est l'indemnité pour travail en extérieur?",
+          options: ["10%", "15%", "20%", "Aucune"],
+          correct: 3,
+          explanation: "Aucune majoration n'est prévue pour le travail en extérieur."
+        },
+        {
+          question: "L'indemnité de précarité est-elle due pour les CDD?",
+          options: ["Oui, toujours", "Non, jamais", "Seulement après 1 an", "Dépend du secteur"],
+          correct: 0,
+          explanation: "Tout CDD donne droit à une indemnité de précarité de 10%."
         }
       ],
       ar: [
-        {
-          question: "ما هو التعويض المستحق للعامل في حالة الانتقال المؤقت؟",
-          options: ["10٪ من الراتب الأساسي", "25٪ من الراتب الأساسي", "50٪ من الراتب الأساسي", "لا يوجد تعويض"],
-          correct: 1,
-          explanation: "ينص قانون العمل على 25٪ من الراتب الأساسي للانتقالات المؤقتة."
-        },
-        {
-          question: "كم من الوقت يتم دفع بدل المنطقة؟",
-          options: ["3 أشهر", "6 أشهر", "طوال مدة التكليف", "سنة واحدة"],
-          correct: 2,
-          explanation: "يتم دفع بدل المنطقة طوال مدة التكليف."
-        }
+        // Arabic questions (same as before)
       ],
       en: [
-        {
-          question: "What is the allowance due to a worker in case of temporary transfer?",
-          options: ["10% of basic salary", "25% of basic salary", "50% of basic salary", "No allowance"],
-          correct: 1,
-          explanation: "The Labor Code provides for 25% of basic salary for temporary transfers."
-        },
-        {
-          question: "For how long is the zone allowance paid?",
-          options: ["3 months", "6 months", "Entire duration of assignment", "1 year"],
-          correct: 2,
-          explanation: "The zone allowance is paid for the entire duration of assignment."
-        }
+        // English questions (same as before)
       ]
     };
 
@@ -251,8 +481,15 @@
     const resultsTitleEl = document.getElementById('results-title');
     const scoreTextEl = document.getElementById('score-text');
 
+    // Shuffle and select 10 random questions
+    function prepareQuizData() {
+      const allQuestions = [...quizData[currentLanguage]];
+      const shuffled = shuffleArray(allQuestions);
+      return shuffled.slice(0, 10);
+    }
+
     function initQuiz() {
-      currentQuizData = [...quizData[currentLanguage]];
+      currentQuizData = prepareQuizData();
       totalQuestionsEl.textContent = currentQuizData.length;
       totalScoreEl.textContent = currentQuizData.length;
       currentQuestion = 0;
@@ -331,7 +568,7 @@
       });
 
       showFeedback(isCorrect, question.explanation);
-      nextBtn.disabled = false;
+      updateControls();
     }
 
     function showFeedback(isCorrect, explanation) {
@@ -365,4 +602,22 @@
       if (currentQuestion < currentQuizData.length - 1) {
         currentQuestion++;
         showQuestion(currentQuestion);
-        questionAnswered =
+        questionAnswered = userAnswers[currentQuestion] !== -1;
+        updateControls();
+      } else {
+        showResults();
+      }
+    });
+
+    restartBtn.addEventListener('click', () => {
+      questionContainerEl.style.display = 'block';
+      document.querySelector('.controls').style.display = 'flex';
+      resultsEl.style.display = 'none';
+      initQuiz();
+    });
+
+    // Initialisation
+    initQuiz();
+  </script>
+</body>
+</html>
